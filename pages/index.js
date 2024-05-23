@@ -41,8 +41,8 @@ export default function Home() {
           ALLOWED_ATTR: ['src', 'alt', 'width', 'height', 'href', 'target', 'rel', 'style'],
         });
 
-        // Resize images
-        const resizedHtml = sanitizedHtml.replace(/<img/g, '<img style="max-width: 500px;"'); 
+        // Resize images while maintaining aspect ratio
+        const resizedHtml = sanitizedHtml.replace(/<img/g, '<img style="max-width: 500px; height: auto;"'); 
 
         setHtmlContent(resizedHtml);
       } catch (err) {
@@ -59,6 +59,7 @@ export default function Home() {
         <title>Dynamic HTML Page</title>
         <meta name="description" content="Displaying dynamic HTML from API." />
         <link rel="icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="/styles.css" /> {/* Include your CSS */}
       </Head>
       <main>
         {error ? (
@@ -70,5 +71,3 @@ export default function Home() {
     </div>
   );
 }
-
-// Note: This component will render on the server-side by default in Next.js
