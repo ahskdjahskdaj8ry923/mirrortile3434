@@ -31,7 +31,7 @@ export default function Home({ htmlContent, error }) {
         {error ? (
           <p className="error">Error fetching data: {error}</p>
         ) : (
-          <MDXRemote {...htmlContent} components={{
+          <MDXRemote {...htmlContent.compiledSource} components={{ 
             img: ({ src, alt }) => (
               <Image src={src} alt={alt} width={500} height={300} /> 
             ),
@@ -80,7 +80,7 @@ export async function getStaticProps() {
     console.log("Serialized content:", htmlContent);
 
     return {
-      props: { htmlContent },
+      props: { htmlContent: htmlContent.compiledSource }, 
       revalidate: 60, 
     };
   } catch (error) {
