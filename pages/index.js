@@ -54,7 +54,7 @@ export async function getStaticProps() {
 
   try {
     const response = await fetch(
-      'https://longlisten.com/api/1.1/obj/webpage/1529179728906x623479290399700400',
+      'https://longlisten.com/api/1.1/obj/denim_brands',
       {
         method: 'GET',
         headers: {
@@ -68,15 +68,23 @@ export async function getStaticProps() {
       throw new Error(`API request failed with status: ${response.status}`);
     }
 
-    const data = await response.json(); 
-    // Check if the data has the expected structure
-    if (!data.response || !data.response.html_page_text) {
-      throw new Error('API response is missing expected data');
-    }
+    const data = await response.json();
+    console.log("API Data:", data); // Inspect the API data in the console
 
-    console.log("API data:", data.response); 
+    const mdxContent = `
+# Denim Brands
 
-    const source = await serialize(data.response.html_page_text, {
+This is a list of popular denim brands:
+
+${data.response.results.map((brand) => `
+## ${brand.brand_name_text}
+${brand.description ? brand.description : 'No description provided.'}
+**Find them online at:** ${brand.url_text ? brand.url_text : 'Not available'}
+**Instagram:** ${brand.instagram_handle_text ? brand.instagram_handle_text : 'Not available'}
+`).join('')}
+`;
+
+    const source = await serialize(mdxContent, {
       mdxOptions: {
         rehypePlugins: [[rehypeSanitize, sanitizeOptions]],
       },
@@ -85,8 +93,8 @@ export async function getStaticProps() {
     console.log("Serialized content:", source);
 
     return {
-      props: { source }, 
-      revalidate: 60, 
+      props: { source },
+      revalidate: 60,
     };
   } catch (error) {
     console.error('Error fetching data:', error);
