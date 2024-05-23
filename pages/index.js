@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
 import { rehypeSanitize } from 'rehype-sanitize';
+import Image from 'next/image';
 
 // Define the allowed elements and attributes for sanitization
 const sanitizeOptions = {
@@ -30,7 +31,12 @@ export default function Home({ htmlContent, error }) {
         {error ? (
           <p className="error">Error fetching data: {error}</p>
         ) : (
-          <MDXRemote {...htmlContent} />
+          <MDXRemote {...htmlContent} components={{
+            img: ({ src, alt }) => (
+              <Image src={src} alt={alt} width={500} height={300} /> 
+            ),
+            // Add more fallbacks for other elements
+          }} />
         )}
       </main>
     </div>
