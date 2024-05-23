@@ -19,6 +19,16 @@ const sanitizeOptions = {
   },
 };
 
+// Define custom components for HTML elements
+const components = {
+  img: ({ src, alt, ...props }) => (
+    <Image src={src} alt={alt} width={500} height={300} {...props} />
+  ),
+  // Add more components for other HTML elements you need to handle
+  // Example:
+  // p: ({ children }) => <p className="my-paragraph">{children}</p>,
+};
+
 export default function Home({ source, error }) {
   return (
     <div className="container">
@@ -31,12 +41,7 @@ export default function Home({ source, error }) {
         {error ? (
           <p className="error">Error fetching data: {error}</p>
         ) : (
-          <MDXRemote {...source} components={{ 
-            img: ({ src, alt }) => (
-              <Image src={src} alt={alt} width={500} height={300} /> 
-            ),
-            // Add more fallbacks for other elements
-          }} />
+          <MDXRemote {...source} components={components} />
         )}
       </main>
     </div>
