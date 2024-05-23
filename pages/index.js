@@ -18,9 +18,7 @@ const sanitizeOptions = {
   },
 };
 
-export default function Home({ htmlContent }) {
-  const [error, setError] = useState(null);
-
+export default function Home({ htmlContent, error }) {
   return (
     <div className="container">
       <Head>
@@ -58,9 +56,14 @@ export async function getStaticProps() {
       throw new Error(`API request failed with status: ${response.status}`);
     }
 
-    const data = await response.json();
+    const data = await response.json(); 
 
-    console.log("API data:", data.response.html_page); // Log the API data
+    // Check if the data has the expected structure
+    if (!data.response || !data.response.html_page) {
+      throw new Error('API response is missing expected data');
+    }
+
+    console.log("API data:", data.response.html_page); 
 
     const htmlContent = await serialize(data.response.html_page, {
       mdxOptions: {
@@ -68,11 +71,11 @@ export async function getStaticProps() {
       },
     });
 
-    console.log("Serialized content:", htmlContent); // Log the serialized content
+    console.log("Serialized content:", htmlContent); 
 
     return {
       props: { htmlContent },
-      revalidate: 60, // Update the data every 60 seconds
+      revalidate: 60, 
     };
   } catch (error) {
     console.error('Error fetching data:', error);
