@@ -60,12 +60,15 @@ export async function getStaticProps() {
 
     const data = await response.json();
 
-    // Sanitize and serialize the HTML
+    console.log("API data:", data.response.html_page); // Log the API data
+
     const htmlContent = await serialize(data.response.html_page, {
       mdxOptions: {
         rehypePlugins: [[rehypeSanitize, sanitizeOptions]],
       },
     });
+
+    console.log("Serialized content:", htmlContent); // Log the serialized content
 
     return {
       props: { htmlContent },
