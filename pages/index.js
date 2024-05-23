@@ -4,8 +4,21 @@ import { serialize } from 'next-mdx-remote/serialize';
 import { MDXRemote } from 'next-mdx-remote';
 import { rehypeSanitize } from 'rehype-sanitize';
 
+// Define the allowed elements and attributes for sanitization
+const sanitizeOptions = {
+  allowedTags: [
+    'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
+    'p', 'br', 'strong', 'em', 'a', 'ul', 'ol', 'li',
+    'img', 'div', 'span', 'table', 'thead', 'tbody', 'tr', 'td', 'th'
+  ],
+  allowedAttributes: {
+    '*': ['class', 'style'],
+    'a': ['href', 'target', 'rel'],
+    'img': ['src', 'alt', 'width', 'height'],
+  },
+};
+
 export default function Home({ htmlContent }) {
-  // State for handling errors
   const [error, setError] = useState(null);
 
   return (
@@ -46,24 +59,11 @@ export async function getStaticProps() {
     }
 
     const data = await response.json();
+
+    // Sanitize and serialize the HTML
     const htmlContent = await serialize(data.response.html_page, {
       mdxOptions: {
-        rehypePlugins: [
-          [rehypeSanitize, {
-            // Allow only valid HTML elements and attributes
-            // Customize the list based on your requirements
-            allowedTags: [
-              'h1', 'h2', 'h3', 'h4', 'h5', 'h6',
-              'p', 'br', 'strong', 'em', 'a', 'ul', 'ol', 'li',
-              'img', 'div', 'span', 'table', 'thead', 'tbody', 'tr', 'td', 'th'
-            ],
-            allowedAttributes: {
-              '*': ['class', 'style'],
-              'a': ['href', 'target', 'rel'],
-              'img': ['src', 'alt', 'width', 'height'],
-            },
-          }],
-        ],
+        rehypePlugins: [[rehypeSanitize, sanitizeOptions]],
       },
     });
 
