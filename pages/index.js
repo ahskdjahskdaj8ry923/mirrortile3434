@@ -71,7 +71,7 @@ export async function getStaticProps() {
       },
     });
 
-    console.log("Serialized content:", htmlContent); 
+    console.log("Serialized content:", htmlContent);
 
     return {
       props: { htmlContent },
