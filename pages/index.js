@@ -33,8 +33,11 @@ export default function Home() {
           throw new Error('API response is missing expected data');
         }
 
+        // Remove shortcodes 
+        let htmlWithoutShortcodes = data.response.html_page_text.replace(/\[.*?\]/g, '');
+
         // Sanitize and resize images
-        const sanitizedHtml = DOMPurify.sanitize(data.response.html_page_text, {
+        const sanitizedHtml = DOMPurify.sanitize(htmlWithoutShortcodes, {
           USE_PROXIES: true,
           SAFE_FOR_SCRIPT: true, // Enable for scripts (if needed)
           ALLOWED_TAGS: ['img', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'br', 'a', 'ul', 'ol', 'li', 'div', 'span'],
