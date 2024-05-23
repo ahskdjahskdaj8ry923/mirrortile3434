@@ -30,6 +30,7 @@ const components = {
 };
 
 export default function Home({ source, error }) {
+  console.log("Source object:", source);  // Log the source object in the browser
   return (
     <div className="container">
       <Head>
