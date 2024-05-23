@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Image from 'next/image';
+import DOMPurify from 'dompurify'; // Install this: npm install dompurify
 
 export default function Home() {
   const [htmlContent, setHtmlContent] = useState('');
@@ -32,7 +33,18 @@ export default function Home() {
           throw new Error('API response is missing expected data');
         }
 
-        setHtmlContent(data.response.html_page_text);
+        // Sanitize and resize images
+        const sanitizedHtml = DOMPurify.sanitize(data.response.html_page_text, {
+          USE_PROXIES: true,
+          SAFE_FOR_SCRIPT: true, // Enable for scripts (if needed)
+          ALLOWED_TAGS: ['img', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'br', 'a', 'ul', 'ol', 'li', 'div', 'span'],
+          ALLOWED_ATTR: ['src', 'alt', 'width', 'height', 'href', 'target', 'rel', 'style'],
+        });
+
+        // Resize images
+        const resizedHtml = sanitizedHtml.replace(/<img/g, '<img style="max-width: 500px;"'); 
+
+        setHtmlContent(resizedHtml);
       } catch (err) {
         setError(err.message);
       }
@@ -58,3 +70,5 @@ export default function Home() {
     </div>
   );
 }
+
+// Note: This component will render on the server-side by default in Next.js
