@@ -30,7 +30,7 @@ const components = {
 };
 
 export default function Home({ source, error }) {
-  console.log("Source object:", source);  // Log the source object in the browser
+  console.log("Source object:", source); // Log the source object in the browser
   return (
     <div className="container">
       <Head>
@@ -69,15 +69,14 @@ export async function getStaticProps() {
     }
 
     const data = await response.json(); 
-
     // Check if the data has the expected structure
-    if (!data.response || !data.response) {
+    if (!data.response || !data.response.content) { // Access the content specifically
       throw new Error('API response is missing expected data');
     }
 
     console.log("API data:", data.response); 
 
-    const source = await serialize(data.response, {
+    const source = await serialize(data.response.content, { // Assuming content is the MDX content 
       mdxOptions: {
         rehypePlugins: [[rehypeSanitize, sanitizeOptions]],
       },
