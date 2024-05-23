@@ -71,13 +71,13 @@ export async function getStaticProps() {
     const data = await response.json(); 
 
     // Check if the data has the expected structure
-    if (!data.response || !data.response.html_page_text) {
+    if (!data.response || !data.response) {
       throw new Error('API response is missing expected data');
     }
 
-    console.log("API data:", data.response.html_page_text); 
+    console.log("API data:", data.response); 
 
-    const source = await serialize(data.response.html_page_text, {
+    const source = await serialize(data.response, {
       mdxOptions: {
         rehypePlugins: [[rehypeSanitize, sanitizeOptions]],
       },
