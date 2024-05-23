@@ -19,7 +19,7 @@ const sanitizeOptions = {
   },
 };
 
-export default function Home({ htmlContent, error }) {
+export default function Home({ source, error }) {
   return (
     <div className="container">
       <Head>
@@ -31,7 +31,7 @@ export default function Home({ htmlContent, error }) {
         {error ? (
           <p className="error">Error fetching data: {error}</p>
         ) : (
-          <MDXRemote {...htmlContent.compiledSource} components={{ 
+          <MDXRemote {...source} components={{ 
             img: ({ src, alt }) => (
               <Image src={src} alt={alt} width={500} height={300} /> 
             ),
@@ -71,16 +71,16 @@ export async function getStaticProps() {
 
     console.log("API data:", data.response.html_page_text); 
 
-    const htmlContent = await serialize(data.response.html_page_text, {
+    const source = await serialize(data.response.html_page_text, {
       mdxOptions: {
         rehypePlugins: [[rehypeSanitize, sanitizeOptions]],
       },
     });
 
-    console.log("Serialized content:", htmlContent);
+    console.log("Serialized content:", source);
 
     return {
-      props: { htmlContent: htmlContent.compiledSource }, 
+      props: { source }, 
       revalidate: 60, 
     };
   } catch (error) {
