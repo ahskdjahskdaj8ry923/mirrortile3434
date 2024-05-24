@@ -58,11 +58,12 @@ export default function Home() {
   const handleLinkClick = (event) => {
     if (event.target.tagName === 'A') {
       const href = event.target.href;
-      if (href.startsWith('#')) {
-        const targetElement = document.querySelector(href);
+      // Check if the link has a fragment identifier
+      if (href.includes('#')) {
+        const targetElement = document.querySelector(href.split('#')[1]); 
         if (targetElement) {
           targetElement.scrollIntoView({ behavior: 'smooth' }); 
-          event.preventDefault();
+          event.preventDefault(); 
         }
       }
     }
