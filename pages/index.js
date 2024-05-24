@@ -40,7 +40,7 @@ export default function Home() {
           USE_PROXIES: true,
           SAFE_FOR_SCRIPT: true, 
           ALLOWED_TAGS: ['img', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'br', 'a', 'ul', 'ol', 'li', 'div', 'span'],
-          ALLOWED_ATTR: ['src', 'alt', 'width', 'height', 'href', 'target', 'rel', 'style', '#'], // Include '#'
+          ALLOWED_ATTR: ['src', 'alt', 'width', 'height', 'href', 'target', 'rel', 'style', '#', 'id', 'class'], // Include 'id' and 'class'
         });
 
         // You can remove this line if you're not resizing images
