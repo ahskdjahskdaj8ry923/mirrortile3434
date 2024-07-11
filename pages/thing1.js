@@ -10,7 +10,7 @@ export default function Thing1() {
         <link rel="stylesheet" href="/styles.css" /> {/* Include your CSS */}
       </Head>
       <main>
-        <h1>Welcome to Page 1</h1>
+        <h1>Welcome to Page 2</h1>
       </main>
     </div>
   );
