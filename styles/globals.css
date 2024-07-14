@@ -1,55 +1,194 @@
-html, body {
-  background-color: #f8fafc;
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap');
 
-main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  background: #e2e8f0;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-family: Menlo, Monaco, Lucida Console, Courier New, monospace;
-}
+@layer base {
+ :not(pre) > code {
+  @apply px-1 py-0.5 font-mono rounded bg-neutral-900 text-yellow-200;
+  font-size: 0.9em;
+ }
 
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+ h1 {
+  @apply mb-6 text-4xl font-bold tracking-tight md:text-5xl;
+ }
 }
-
+/* Overall styles */
 body {
-  font-family: 'Helvetica', sans-serif;
-  max-width: 500px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px;
-  font-size: 18px; /* Set minimum font size */
+ background-color: #f4f4f4; /* Grungy off-white background */
+ font-family: 'Arial', 'Courier New', monospace; /* Classic 90s fonts */
+ margin: 0;
+ padding: 10%; /* 10% padding on all sides */
+ font-size: 17px;
+ text-align: left;
+ color: #000000; /* Very dark gray, almost black text */
+ max-width: 700px;
+ margin: 0 auto; /* Center the content */
 }
 
-img {
-  display: block;
-  margin: 20px auto;
+/* Link styles */
+a {
+ color: #0000FF; /* Classic blue link color */
+ text-decoration: underline; 
 }
 
+a:visited {
+ color: #800080; /* Visited link - purple! */
+}
+
+/* Container styles */
+.container {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+/* Header styles */
+header {
+ background-color: #000080; /* Dark blue, a 90s staple */
+ color: #FFFF00; /* Bright yellow for contrast */
+ padding: 20px 0;
+ text-align: center;
+ width: 100%; /* Full width */
+ position: fixed; /* Make the header stick to the top */
+ top: 0; 
+ z-index: 100; /* Ensure header stays on top */
+}
+
+/* Heading styles */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-  margin-bottom: 10px;
+ text-align: center;
 }
 
-p {
-  line-height: 1.6;
-  margin-bottom: 15px;
+h1 {
+ font-size: 3em;
+ text-shadow: 2px 2px 4px #000000; 
+}
+
+/* Add more space *above* h2s */
+h2 {
+ font-size: 2em;
+ color: #FF0000; /* Red h2 for that extra 90s touch */
+ margin-top: 3em; /* Add space above */
+ margin-bottom: 0; /* Remove space below h2 */
+}
+
+/* Navigation styles */
+nav {
+ background-color: #D3D3D3; /* Light gray for the win! */
+ padding: 10px 0;
+ text-align: center;
+}
+
+nav a {
+ color: #000080; 
+ margin: 0 15px;
+ text-decoration: none;
+ font-weight: bold;
+}
+
+/* Content area styles */
+main {
+ padding: 20px;
+ background-color:#f7f7f7;
+}
+
+/* Image styles */
+img {
+ border: 5px solid #000000; /* Thick black border - very 90s */
+ box-shadow: 5px 5px 10px #888888;
+ max-width: 80%; 
+ height: auto;
+ display: block;
+ margin: 20px auto; /* More spacing around images */
+}
+
+/* Button styles */
+button {
+ background-color: #32CD32; /* That bright green, you know it! */
+ color: #ffffff;
+ border: none;
+ padding: 10px 20px;
+ font-weight: bold;
+ cursor: pointer;
+ border-radius: 0; /* No rounded corners in the 90s */
+ text-transform: uppercase; /* EVERYTHING WAS IN UPPERCASE */
+}
+
+/* Table styles */
+table {
+ border-collapse: collapse;
+ width: 80%;
+ margin: 20px auto;
+ border: 3px solid #A9A9A9; /* Dark gray table borders */
+}
+
+th, td {
+ border: 1px solid #A9A9A9; /* Dark gray table borders */
+ padding: 8px;
+ text-align: left; /* Align text to the left */
+}
+
+th { 
+ background-color: #A9A9A9; /* Dark gray table header */
+}
+
+/* Footer styles */
+footer {
+ background-color: #000080;
+ color: #ffff00;
+ padding: 10px 0;
+ clear: both;
+ position: relative;
+ text-align: center;
+ bottom: 0; /* Fix footer to the bottom */
+ width: 100%;
+}
+
+/* Copyright text styles */
+.copyright {
+ position: absolute;
+ bottom: 5px;
+ left: 50%;
+ transform: translateX(-50%);
+ font-size: 0.8em;
+}
+
+/* Marquee text for extra 90s points - use sparingly! */
+marquee {
+ font-size: 24px;
+ color: #FF0000;
+ background-color: #FFFF00;
+ padding: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+ /* Adjust font sizes for smaller screens */
+ h1 {
+  font-size: 2.5em;
+ }
+ h2 {
+  font-size: 1.5em;
+ }
+ /* Adjust padding for smaller screens */
+ main {
+  padding: 10px;
+ }
+ /* Adjust image sizes for smaller screens */
+ img {
+  max-width: 90%;
+ }
+ /* Adjust table width for smaller screens */
+ table {
+  width: 90%;
+ }
+}
+
+/* Style for paragraphs with "cap" class */
+.cap {
+ text-align: center; 
+ color: #696969; /* Dark gray color */
 }
