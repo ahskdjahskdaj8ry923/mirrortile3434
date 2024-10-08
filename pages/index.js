@@ -37,8 +37,18 @@ export default function Home() {
         const sanitizedHtml = DOMPurify.sanitize(htmlWithoutShortcodes, {
           USE_PROXIES: true,
           SAFE_FOR_SCRIPT: true,
-          ALLOWED_TAGS: ['img', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'br', 'a', 'ul', 'ol', 'li', 'div', 'span'],
-          ALLOWED_ATTR: ['src', 'alt', 'width', 'height', 'href', 'target', 'rel', 'style', '#', 'id', 'class'], // Include 'id' and 'class'
+          ALLOWED_TAGS: [
+            'img', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'br', 'a',
+            'ul', 'ol', 'li', 'div', 'span', 'table', 'thead', 'tbody',
+            'tr', 'td', 'th', 'col', 'colgroup', 'caption', 'strong',
+            'em', 'blockquote', 'code', 'pre', 'sup', 'sub', 'iframe'
+          ],
+          ALLOWED_ATTR: [
+            'src', 'alt', 'width', 'height', 'href', 'target', 'rel',
+            'style', 'id', 'class', 'colspan', 'rowspan', 'cellspacing',
+            'cellpadding', 'border', 'align', 'valign', 'frameborder',
+            'allow', 'allowfullscreen', 'title', 'name', 'type', 'value'
+          ],
         });
 
         setHtmlContent(sanitizedHtml);
