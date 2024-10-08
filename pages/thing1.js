@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 export default function Thing1() {
   return (
+     <div className="container">
 <h1> Your Guide to Mirror Tiles</h1>
 <p>This is a simple guide for deciding whether or not mirror tiles are the right product to put in your home. My goal is to provide as detailed a webpage as possible, helping you understand all the considerations, starting with design and ending with maintenance. </p><p>I'll also talk in detail about the pros and cons of DIY v. professional installation. If you have a question not covered on the page, use the "question" box below to send me a question. I'll try to get back to you within one business day.</p>
 <h2>Table Of Contents</h2><ul><li class="show"><p><a href="#Choosing_The_Right_Type_Of_Mirror_Tile">Choosing The Right Type Of Mirror Tile</a></p></li> <li class="show"><p><a href="#Communicating_Your_Ideas_And_Receiving_Bids">Communicating Your Ideas And Receiving Bids</a></p></li> <li class="show"><p><a href="#Considerations:_DIY_Vs._Professional">Considerations: DIY Vs. Professional</a></p></li> <li class="show"><p><a href="#DIY_Techniques_And_Considerations_(separate_These)">DIY Techniques And Considerations (separate These)</a></p></li> <li class="show"><p><a href="#Cleaning_And_Maintenance">Cleaning And Maintenance</a></p></li> <li class="show"><p><a href="#Durability_Replacements_Glass_Cracking_From_Heat">Durability Replacements Glass Cracking From Heat</a></p></li> <li class="show"><p><a href="#Alternatives_That_Achieve_A_Similar_Look">Alternatives That Achieve A Similar Look</a></p></li></ul>
@@ -49,4 +50,5 @@ export default function Thing1() {
   </p>
 </div>
 <h2 class="hidden"></h2><span class="abovecap"></span>[caption align="aligncenter" width="1000px"]<a href="" target="blank" rel="noopener"><img class="aligncenter" title="" src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fb8e0c18ce21bae7b3e641b6a37ff3f4a.cdn.bubble.io%2Ff1717729830743x200278486618245900%2Fmirror-distortion.png?auto=compress&fit=fill" alt="" width="95%" max-width="95%" height="100%"/></a>[/caption]<p class="cap">a classic case of mirror distortion...</p><br>
-}
+        </div>
+        }
