@@ -71,7 +71,7 @@ h1 {
 h2 {
  font-size: 2em;
  color: #FF0000; /* Red h2 for that extra 90s touch */
- margin-top: 3em; /* Add space above */
+ margin-top: 2em; /* Add space above */
  margin-bottom: 0; /* Remove space below h2 */
 }
 
