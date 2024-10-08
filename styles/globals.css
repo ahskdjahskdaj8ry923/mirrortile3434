@@ -65,6 +65,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
  font-size: 3em;
  text-shadow: 2px 2px 4px #000000; 
+ margin-top:2em;
 }
 
 /* Add more space *above* h2s */
