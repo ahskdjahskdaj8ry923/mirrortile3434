@@ -1,8 +1,6 @@
 import Head from 'next/head';
-import { useState } from 'react';
-import { useEffect } from 'react';
-// import Image from 'next/image'; // You don't need this anymore
-import DOMPurify from 'dompurify'; // Install this: npm install dompurify
+import { useState, useEffect } from 'react';
+import DOMPurify from 'dompurify'; // Make sure you have this installed: npm install dompurify
 
 export default function Home() {
   const [htmlContent, setHtmlContent] = useState('');
@@ -10,7 +8,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchHtml = async () => {
-      const yourApiKey = '26d314281b30983a6098ee917478b72b'; // Replace with your actual API key
+      const yourApiKey = 'YOUR_API_KEY'; // Replace with your actual API key
       try {
         const response = await fetch(
           'https://longlisten.com/api/1.1/obj/webpage/1717223571550x822318041488949200',
@@ -18,7 +16,7 @@ export default function Home() {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': `Bearer ${yourApiKey}`, 
+              'Authorization': `Bearer ${yourApiKey}`,
             },
           }
         );
@@ -33,26 +31,28 @@ export default function Home() {
         }
 
         // Remove shortcodes
-        let htmlWithoutShortcodes = data.response.html_page_text.replace(/\[.*?\]/g, ''); 
+        let htmlWithoutShortcodes = data.response.html_page_text.replace(/\[.*?\]/g, '');
 
         // Sanitize and resize images
         const sanitizedHtml = DOMPurify.sanitize(htmlWithoutShortcodes, {
           USE_PROXIES: true,
-          SAFE_FOR_SCRIPT: true, 
+          SAFE_FOR_SCRIPT: true,
           ALLOWED_TAGS: ['img', 'p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'br', 'a', 'ul', 'ol', 'li', 'div', 'span'],
           ALLOWED_ATTR: ['src', 'alt', 'width', 'height', 'href', 'target', 'rel', 'style', '#', 'id', 'class'], // Include 'id' and 'class'
         });
 
-        // You can remove this line if you're not resizing images
-        // const resizedHtml = sanitizedHtml.replace(/<img/g, '<img style="max-width: 500px; height: auto;"');
-
-        setHtmlContent(sanitizedHtml); 
+        setHtmlContent(sanitizedHtml);
       } catch (err) {
         setError(err.message);
       }
     };
 
-    fetchHtml();
+    fetchHtml(); // Initial fetch
+
+    const intervalId = setInterval(fetchHtml, 30000); // Fetch every 30 seconds
+
+    // Cleanup function to clear the interval when the component unmounts
+    return () => clearInterval(intervalId);
   }, []);
 
   const handleLinkClick = (event) => {
@@ -60,10 +60,11 @@ export default function Home() {
       const href = event.target.href;
       // Check if the link has a fragment identifier
       if (href.includes('#')) {
-        const targetElement = document.querySelector(href.split('#')[1]); 
+        const targetId = href.split('#')[1];
+        const targetElement = document.getElementById(targetId);
         if (targetElement) {
-          targetElement.scrollIntoView({ behavior: 'smooth' }); 
-          event.preventDefault(); 
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+          event.preventDefault();
         }
       }
     }
@@ -71,6 +72,10 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Your Page Title</title>
+        {/* Include other head elements if needed */}
+      </Head>
       <main>
         <div className="container" onClick={handleLinkClick}>
           {error ? (
