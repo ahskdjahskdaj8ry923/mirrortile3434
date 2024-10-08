@@ -73,8 +73,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Your Page Title</title>
-        {/* Include other head elements if needed */}
+        <title>Your Guide to Mirror Tiles</title>
       </Head>
       <main>
         <div className="container" onClick={handleLinkClick}>
