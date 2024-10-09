@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link'; // Import Link for routing
 
 const Home = () => {
   return (
@@ -16,13 +17,26 @@ const Home = () => {
         
         <h2 id="Table_of_Contents">Table Of Contents</h2>
         <ul>
-          <li className="show"><p><a href="#Choosing_The_Right_Type_Of_Mirror_Tile">Choosing The Right Type Of Mirror Tile</a></p></li>
-          <li className="show"><p><a href="#Communicating_Your_Ideas_And_Receiving_Bids">Communicating Your Ideas And Receiving Bids</a></p></li>
-          <li className="show"><p><a href="#Considerations:_DIY_Vs._Professional">Considerations: DIY Vs. Professional</a></p></li>
-          <li className="show"><p><a href="#DIY_Techniques_And_Considerations_(separate_These)">DIY Techniques And Considerations (separate These)</a></p></li>
-          <li className="show"><p><a href="#Cleaning_And_Maintenance">Cleaning And Maintenance</a></p></li>
-          <li className="show"><p><a href="#Durability_Replacements_Glass_Cracking_From_Heat">Durability Replacements Glass Cracking From Heat</a></p></li>
-          <li className="show"><p><a href="#Alternatives_That_Achieve_A_Similar_Look">Alternatives That Achieve A Similar Look</a></p></li>
+          <li className="show">
+            <p>
+              <Link href="/designing-mirror-tiles">Designing with Tiles</Link>
+            </p>
+          </li>
+          <li className="show">
+            <p>
+              <Link href="/diy-or-professional">Going DIY or Professional</Link>
+            </p>
+          </li>
+          <li className="show">
+            <p>
+              <Link href="/setting-tiles">Installing Tiles</Link>
+            </p>
+          </li>
+          <li className="show">
+            <p>
+              <Link href="/cleaning-and-maintenance">Cleaning and Maintenance</Link>
+            </p>
+          </li>
         </ul>
 
         <div id="Some_Things_To_Consider_About_Mirror_Tiles" className="new"></div>
