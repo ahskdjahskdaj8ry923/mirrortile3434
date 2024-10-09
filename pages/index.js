@@ -15,7 +15,7 @@ const Home = () => {
         <p>This is a simple guide for deciding whether or not mirror tiles are the right product to put in your home. My goal is to provide as detailed a webpage as possible, helping you understand all the considerations, starting with design and ending with maintenance.</p>
         <p>I'll also talk in detail about the pros and cons of DIY vs. professional installation. If you have a question not covered on the page, use the "question" box below to send me a question. I'll try to get back to you within one business day.</p>
         
-        <h2 id="Table_of_Contents">Table Of Contents</h2>
+        <h2 id="Sections">Sections</h2>
         <ul>
           <li className="show">
             <p>
@@ -149,6 +149,24 @@ const Home = () => {
           </a>
         </div>
         <p className="cap" style={{ textAlign: 'center', fontStyle: 'italic' }}>a classic case of mirror distortion...</p>
+        
+        <div id="Alternatives_That_Achieve_A_Similar_Look" style={{ marginTop: '40px' }}>
+          <h2>Alternatives That Achieve A Similar Look</h2>
+          <p style={{ fontWeight: 'bold' }}>Alternative Materials for Achieving a Similar Look:</p>
+          <ul>
+            <li>Larger mirrors (as opposed to smaller tiles)</li>
+            <li>Ceramic tiles (typically found in bathrooms and kitchens)</li>
+            <li>Porcelain tiles</li>
+            <li>Various other tile products</li>
+          </ul>
+          <p style={{ fontWeight: 'bold' }}>Highly Recommended Option:</p>
+          <p>Metal veneer (a thin layer of metal that is easy to install and visually appealing)</p>
+          <p style={{ fontWeight: 'bold' }}>Other Classic Options:</p>
+          <ul>
+            <li>Wood</li>
+            <li>Paint</li>
+          </ul>
+        </div>
       </main>
     </div>
   );
