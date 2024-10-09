@@ -9,6 +9,23 @@ const CleaningAndMaintenance = () => {
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="/styles.css" /> {/* Include your CSS */}
       </Head>
+    import Link from 'next/link'; // Import Link for routing
+  <header style={{ padding: '10px 20px', backgroundColor: '#f8f9fa', borderBottom: '1px solid #ddd' }}>
+    <nav style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+      <Link href="/designing-mirror-tiles">
+        <a style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>Designing with Tiles</a>
+      </Link>
+      <Link href="/diy-or-professional">
+        <a style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>Going DIY or Professional</a>
+      </Link>
+      <Link href="/setting-tiles">
+        <a style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>Installing Tiles</a>
+      </Link>
+      <Link href="/cleaning-and-maintenance">
+        <a style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>Cleaning and Maintenance</a>
+      </Link>
+    </nav>
+  </header>
       <main style={{ fontFamily: 'Arial, sans-serif' }}>
         <div id="Cleaning_And_Maintenance" className="new"></div>
         
