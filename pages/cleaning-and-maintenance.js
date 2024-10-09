@@ -1,34 +1,69 @@
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import Link from 'next/link'; // Import Link for routing
+import Link from 'next/link';
 
 const CleaningAndMaintenance = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 600);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <div className="container">
       <Head>
         <title>Cleaning and Maintenance</title>
         <meta name="description" content="Guide for cleaning and maintaining mirror tiles" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="/styles.css" /> {/* Include your CSS */}
       </Head>
-      <header style={{ padding: '10px 20px', backgroundColor: '#f8f9fa', borderBottom: '1px solid #ddd' }}>
-        <nav style={{ display: 'flex', justifyContent: 'center', gap: '20px' }}>
+      <header
+        style={{
+          padding: '10px 20px',
+          backgroundColor: '#f8f9fa',
+          borderBottom: '1px solid #ddd',
+        }}
+      >
+        <nav
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            flexWrap: 'wrap',
+            gap: isMobile ? '10px' : '20px',
+          }}
+        >
           <Link href="/designing-mirror-tiles">
-            <a style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>Designing with Tiles</a>
+            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
+              Designing with Tiles
+            </span>
           </Link>
           <Link href="/diy-or-professional">
-            <a style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>Going DIY or Professional</a>
+            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
+              Going DIY or Professional
+            </span>
           </Link>
           <Link href="/setting-tiles">
-            <a style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>Installing Tiles</a>
+            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
+              Installing Tiles
+            </span>
           </Link>
           <Link href="/cleaning-and-maintenance">
-            <a style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>Cleaning and Maintenance</a>
+            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
+              Cleaning and Maintenance
+            </span>
           </Link>
         </nav>
       </header>
       <main style={{ fontFamily: 'Arial, sans-serif' }}>
         <div id="Cleaning_And_Maintenance" className="new"></div>
-
         <h2 id="Cleaning_And_Maintenance">Cleaning And Maintenance</h2>
         <div>
           <p style={{ fontWeight: 'bold' }}>Cleaning and Maintaining Mirror Tiles</p>
@@ -86,6 +121,6 @@ const CleaningAndMaintenance = () => {
       </main>
     </div>
   );
-}
+};
 
 export default CleaningAndMaintenance;
