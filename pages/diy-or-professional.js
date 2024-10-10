@@ -1,17 +1,69 @@
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 const BuildingPhase = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 600);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <div className="container">
       <Head>
         <title>Building Phase</title>
         <meta name="description" content="Learn about building, planning, and installing mirror tiles" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="/styles.css" /> {/* Include your CSS */}
       </Head>
+      <header
+        style={{
+          padding: '10px 20px',
+          backgroundColor: '#f8f9fa',
+          borderBottom: '1px solid #ddd',
+        }}
+      >
+        <nav
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            flexWrap: 'wrap',
+            gap: isMobile ? '10px' : '20px',
+          }}
+        >
+          <Link href="/designing-mirror-tiles">
+            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
+              Designing with Tiles
+            </span>
+          </Link>
+          <Link href="/diy-or-professional">
+            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
+              Going DIY or Professional
+            </span>
+          </Link>
+          <Link href="/setting-tiles">
+            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
+              Installing Tiles
+            </span>
+          </Link>
+          <Link href="/cleaning-and-maintenance">
+            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
+              Cleaning and Maintenance
+            </span>
+          </Link>
+        </nav>
+      </header>
       <main style={{ fontFamily: 'Arial, sans-serif' }}>
         <h1>Building Phase</h1>
-
         <div id="Communicating_Your_Ideas_And_Receiving_Bids" className="new"></div>
         <h2 id="Communicating_Your_Ideas_And_Receiving_Bids">Communicating Your Ideas And Receiving Bids</h2>
         <p>When you are trying to figure out if a project is even worth doing -- or budgeting -- then making a plan for presenting the information to contractors is a great first step. See the checklist below for the information you will need to have handy when discussing this project with a professional</p>
