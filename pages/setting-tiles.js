@@ -81,11 +81,13 @@ const InstallingMirrorTiles = () => {
             <li>Measuring tape</li>
             <li>Level</li>
             <li>Pencil or chalk</li>
-            <li>Adhesive suitable for mirrors (mirror mastic or adhesive strips)</li>
+            <li>Mirror adhesive (mirror mastic) or double-sided mirror tape</li>
             <li>Notched trowel (if using mastic)</li>
+            <li>Tile spacers (1/16" recommended)</li>
             <li>Glass cutter (if tiles need to be cut)</li>
             <li>Safety gear (gloves, safety glasses)</li>
             <li>Soft cloth</li>
+            <li>Painter's tape</li>
           </ul>
         </section>
 
@@ -121,13 +123,17 @@ const InstallingMirrorTiles = () => {
           <ul>
             <li>Measure the wall dimensions (height and width).</li>
             <li>
-              Determine the size of the mirror tiles and calculate how many you'll need.
+              Determine the size of the mirror tiles and calculate how many you'll need, including
+              accounting for 1/16" gaps between tiles.
             </li>
             <li>
               Decide on a tile pattern (straight, staggered, diagonal) that suits your design vision.
             </li>
             <li>
-              Mark guidelines on the wall using a level and pencil to keep tiles aligned.
+              Mark horizontal and vertical guidelines on the wall using a level and pencil to keep tiles aligned.
+            </li>
+            <li>
+              Dry-fit the tiles on the floor or a large table, including spacers, to visualize the layout.
             </li>
           </ul>
           <p>
@@ -142,7 +148,7 @@ const InstallingMirrorTiles = () => {
             For areas where full tiles won't fit, you'll need to cut mirror tiles to size:
           </p>
           <ul>
-            <li>Measure the space where the tile will fit.</li>
+            <li>Measure the space where the tile will fit, accounting for spacers and gaps.</li>
             <li>
               Mark the cut line on the tile using a straight edge and a non-permanent marker.
             </li>
@@ -151,6 +157,9 @@ const InstallingMirrorTiles = () => {
             </li>
             <li>
               Snap the tile gently along the scored line.
+            </li>
+            <li>
+              Smooth any sharp edges with fine-grit sandpaper or a rubbing stone.
             </li>
           </ul>
           <p>
@@ -167,69 +176,149 @@ const InstallingMirrorTiles = () => {
           <ul>
             <li>
               Use a mirror mastic or adhesive specifically designed for mirrors to avoid
-              discoloration.
+              discoloration and ensure a secure bond.
             </li>
             <li>
-              If using adhesive strips, ensure they are rated for the weight of the mirror tiles.
+              Avoid using acid-based adhesives or those containing solvents like ammonia or vinegar.
             </li>
           </ul>
           <p>To apply adhesive:</p>
           <ul>
             <li>
-              Apply the mastic to the back of the tile in a few evenly spaced dollops, keeping it away
-              from the edges to prevent squeeze-out.
+              Lay the mirror tile face down on a clean, soft surface.
             </li>
             <li>
-              For large tiles, spread the adhesive with a notched trowel for even coverage.
+              Apply the mastic to the back of the tile in vertical lines or in a serpentine pattern, keeping it about 1 inch away from the edges to prevent squeeze-out.
             </li>
             <li>
-              Avoid getting adhesive on the mirror surface. Wipe off any excess immediately with a soft
-              cloth.
+              Ensure an even layer of adhesive to prevent voids that could cause breakage or poor adhesion.
+            </li>
+            <li>
+              For larger tiles, use a notched trowel to spread the adhesive evenly.
             </li>
           </ul>
+          <p>
+            <strong>Note:</strong> Do not apply adhesive too close to the edges, and avoid getting adhesive on the mirror surface. Wipe off any excess immediately with a soft cloth if accidental contact occurs.
+          </p>
         </section>
 
         <section>
-          <h3>5. Setting the Tiles</h3>
+          <h3>5. Using Tile Spacers and Accounting for Thermal Expansion</h3>
+          <p>
+            Allowing for a 1/16" gap between mirror tiles is essential to accommodate thermal expansion and prevent cracking:
+          </p>
+          <ul>
+            <li>
+              Use 1/16" tile spacers between each tile to maintain consistent gaps.
+            </li>
+            <li>
+              Ensure spacers are placed at each corner where tiles meet.
+            </li>
+            <li>
+              Avoid pushing tiles too tightly together, which can lead to breakage over time.
+            </li>
+            <li>
+              Remove spacers once the adhesive has set enough to hold the tiles in place (refer to adhesive instructions).
+            </li>
+          </ul>
+          <p>
+            <strong>Tip:</strong> For adhesive that takes longer to set, consider using painter's tape to hold tiles in position until the adhesive cures.
+          </p>
+        </section>
+
+        <section>
+          <h3>6. Setting the Tiles</h3>
           <p>
             Now it's time to place the tiles onto the wall:
           </p>
           <ul>
             <li>
-              Begin at your starting point (usually the center or bottom center of the wall).
+              Begin at your starting point (usually the center or bottom center of the wall) and follow your guidelines.
             </li>
             <li>
-              Press each tile firmly against the wall, applying even pressure.
+              Carefully align the first tile using the level to ensure it's perfectly straight.
             </li>
             <li>
-              Use spacers if you want consistent gaps between tiles for grouting (optional).
+              Press the tile firmly against the wall, applying even pressure to eliminate air pockets.
             </li>
             <li>
-              Continuously check the alignment with your guidelines and adjust as needed.
+              Place tile spacers along the edges before positioning the next tile.
             </li>
             <li>
-              Allow the adhesive to set according to the manufacturer's instructions before
-              proceeding.
+              Continue the process, checking alignment frequently and adjusting as needed.
+            </li>
+            <li>
+              For tiles above the initial row, support may be needed until the adhesive sets. Use small nails or temporary supports if necessary, being careful not to damage the wall.
+            </li>
+          </ul>
+          <p>
+            <strong>Reminder:</strong> Work patiently and avoid rushing. Taking your time ensures a better finish.
+          </p>
+        </section>
+
+        <section>
+          <h3>7. Allow Adhesive to Cure</h3>
+          <p>
+            Once all the tiles are in place:
+          </p>
+          <ul>
+            <li>
+              Refer to the adhesive manufacturer's instructions for curing time. This can range from a few hours to 48 hours.
+            </li>
+            <li>
+              Avoid touching or applying pressure to the tiles during this time.
+            </li>
+            <li>
+              Ensure the area is well-ventilated to facilitate drying.
             </li>
           </ul>
         </section>
 
         <section>
-          <h3>6. Finishing Touches</h3>
+          <h3>8. Grouting the Gaps (Optional)</h3>
           <p>
-            After all tiles are set and the adhesive is cured:
+            If you want to fill the gaps between the mirror tiles:
           </p>
           <ul>
             <li>
-              If you've left gaps between tiles, you can fill them with a non-acidic, neutral-cure
-              silicone sealant instead of traditional grout to prevent damaging the mirror edges.
+              Use a non-acidic, neutral-cure silicone sealant to prevent damage to the mirror edges.
             </li>
             <li>
-              Clean the mirror surfaces with a glass cleaner to remove fingerprints and smudges.
+              Load the sealant into a caulking gun for precise application.
+            </li>
+            <li>
+              Apply the sealant into the gaps, ensuring complete coverage.
+            </li>
+            <li>
+              Smooth the sealant with a gloved finger or a caulking tool for a neat finish.
+            </li>
+            <li>
+              Wipe away any excess sealant from the mirror surface immediately with a soft cloth.
             </li>
           </ul>
           <p>
-            <strong>Tip:</strong> Regular maintenance will keep your mirror tiles looking pristine.
+            <strong>Note:</strong> Traditional grout is not recommended as it can scratch the mirror surface and damage the backing.
+          </p>
+        </section>
+
+        <section>
+          <h3>9. Finishing Touches</h3>
+          <p>
+            After all tiles are set and the adhesive and sealant (if used) are fully cured:
+          </p>
+          <ul>
+            <li>
+              Clean the mirror surfaces with a gentle, non-abrasive glass cleaner to remove fingerprints and smudges.
+            </li>
+            <li>
+              Install any trim or edging if desired to frame the mirror tiles and protect the edges.
+            </li>
+            <li>
+              Dispose of any leftover materials safely, especially sharp shards from tile cuts.
+            </li>
+          </ul>
+          <p>
+            <strong>Tip:</strong> Regular maintenance will keep your mirror tiles looking pristine. Wipe them down periodically to prevent dust and grime buildup.
           </p>
         </section>
 
@@ -257,22 +346,22 @@ const InstallingMirrorTiles = () => {
               <tbody>
                 <tr>
                   <td style={{ border: '1px solid #ddd', padding: '0.5em', textAlign: 'center' }}>Simple</td>
-                  <td style={{ border: '1px solid #ddd', padding: '0.5em' }}>Small areas (&lt; 2 feet), basic patterns, no cutting required.</td>
+                  <td style={{ border: '1px solid #ddd', padding: '0.5em' }}>Small areas (&lt; 2 feet), basic patterns, no cutting required, minimal obstacles.</td>
                   <td style={{ border: '1px solid #ddd', padding: '0.5em', textAlign: 'center' }}>1-3</td>
                 </tr>
                 <tr style={{ backgroundColor: '#f9f9f9' }}>
                   <td style={{ border: '1px solid #ddd', padding: '0.5em', textAlign: 'center' }}>Moderate</td>
-                  <td style={{ border: '1px solid #ddd', padding: '0.5em' }}>Medium areas (2-3 feet), simple cuts, standard patterns.</td>
+                  <td style={{ border: '1px solid #ddd', padding: '0.5em' }}>Medium areas (2-3 feet), simple cuts, standard patterns, some obstacles.</td>
                   <td style={{ border: '1px solid #ddd', padding: '0.5em', textAlign: 'center' }}>4-6</td>
                 </tr>
                 <tr>
                   <td style={{ border: '1px solid #ddd', padding: '0.5em', textAlign: 'center' }}>Difficult</td>
-                  <td style={{ border: '1px solid #ddd', padding: '0.5em' }}>Large areas (&gt; 3 feet), intricate cuts, complex patterns.</td>
+                  <td style={{ border: '1px solid #ddd', padding: '0.5em' }}>Large areas (&gt; 3 feet), intricate cuts, complex patterns, multiple obstacles (outlets, switches).</td>
                   <td style={{ border: '1px solid #ddd', padding: '0.5em', textAlign: 'center' }}>7-8</td>
                 </tr>
                 <tr style={{ backgroundColor: '#f9f9f9' }}>
                   <td style={{ border: '1px solid #ddd', padding: '0.5em', textAlign: 'center' }}>Very Difficult</td>
-                  <td style={{ border: '1px solid #ddd', padding: '0.5em' }}>Very large areas, custom designs, requires professional tools.</td>
+                  <td style={{ border: '1px solid #ddd', padding: '0.5em' }}>Very large areas, custom designs, requires professional tools or skills, structural considerations.</td>
                   <td style={{ border: '1px solid #ddd', padding: '0.5em', textAlign: 'center' }}>9-10</td>
                 </tr>
               </tbody>
@@ -297,8 +386,19 @@ const InstallingMirrorTiles = () => {
               carefully.
             </li>
             <li>
-              <strong>Get Help if Needed:</strong> Mirror tiles can be heavy and fragile. Having an
-              extra pair of hands can make the installation safer and more precise.
+              <strong>Work Safely:</strong> Wear appropriate safety gear, and make sure your work area is clear of tripping hazards.
+            </li>
+            <li>
+              <strong>Double-Check Measurements:</strong> Measure twice, cut once to avoid waste and ensure a perfect fit.
+            </li>
+            <li>
+              <strong>Plan for Electrical Outlets and Fixtures:</strong> Cutouts for outlets or fixtures require precise measurements and careful cutting.
+            </li>
+            <li>
+              <strong>Use Quality Materials:</strong> Invest in good-quality mirror tiles and adhesives for a long-lasting installation.
+            </li>
+            <li>
+              <strong>Maintain Cleanliness:</strong> Keep your hands and tools clean to avoid smudging the mirror surfaces during installation.
             </li>
           </ul>
         </section>
@@ -309,10 +409,11 @@ const InstallingMirrorTiles = () => {
             While DIY projects can be rewarding, some situations are better handled by professionals:
           </p>
           <ul>
-            <li>If the project involves large or heavy mirror panels.</li>
-            <li>If electrical outlets or light fixtures need to be worked around.</li>
-            <li>If the wall surface is severely uneven or damaged.</li>
-            <li>If you're unsure about any step of the process.</li>
+            <li>If the project involves large or heavy mirror panels that are difficult to handle safely.</li>
+            <li>If precise cutting around intricate shapes or obstacles is required.</li>
+            <li>If electrical outlets or light fixtures need to be worked around, especially if electrical work is needed.</li>
+            <li>If the wall surface is severely uneven, damaged, or requires structural modifications.</li>
+            <li>If you're unsure about any step of the process or lack the necessary tools.</li>
           </ul>
           <p>
             Hiring a professional ensures the job is done safely and correctly, potentially saving you
