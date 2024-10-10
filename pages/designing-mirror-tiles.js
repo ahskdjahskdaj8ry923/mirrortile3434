@@ -19,7 +19,7 @@ export default function Thing1() {
   }, []);
 
   return (
-    <div style={{ fontFamily: 'Arial, sans-serif', margin: '0 auto', maxWidth: '800px' }}>
+    <div className="container">
       <Head>
         <title>Design Phase</title>
         <meta name="description" content="Guide to Choosing the Right Mirror Tile" />
@@ -30,8 +30,6 @@ export default function Thing1() {
           padding: '10px 20px',
           backgroundColor: '#f8f9fa',
           borderBottom: '1px solid #ddd',
-          maxWidth: '800px',
-          margin: '0 auto',
         }}
       >
         <nav
@@ -64,7 +62,7 @@ export default function Thing1() {
           </Link>
         </nav>
       </header>
-      <main>
+      <main style={{ fontFamily: 'Arial, sans-serif' }}>
         <h1 style={{ fontSize: '36px', fontWeight: 'bold', marginBottom: '24px' }}>Design Phase</h1>
         <div id="Choosing_The_Right_Type_Of_Mirror_Tile" className="new"></div>
         <h2 style={{ fontSize: '28px', fontWeight: 'bold', marginBottom: '16px' }}>Choosing The Right Mirror Tile</h2>
