@@ -267,7 +267,7 @@ export default function DesigningWithMirrorTiles() {
           </ul>
           <figure style={{ textAlign: 'center', marginBottom: '32px' }}>
             <img
-              src="https://example.com/square-mirror-tiles.jpg"
+              src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fb8e0c18ce21bae7b3e641b6a37ff3f4a.cdn.bubble.io%2Ff1717634941652x221478916136228500%2Fjcm89723i6i768_backsplash_in_home_bar_in_scandinavian_style_hom_3495bf34-4466-40a1-97e1-f32e70220537.png?auto=compress&fit=fill"
               alt="Square 8 x 8 inch mirror tiles"
               style={{ width: '95%', maxWidth: '600px', height: 'auto' }}
             />
@@ -396,7 +396,7 @@ export default function DesigningWithMirrorTiles() {
           </ul>
           <figure style={{ textAlign: 'center', marginBottom: '32px' }}>
             <img
-              src="https://example.com/beveled-subway-tiles.jpg"
+              src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fb8e0c18ce21bae7b3e641b6a37ff3f4a.cdn.bubble.io%2Ff1717836906235x676275968209342200%2Fjcm89723i6i768_backsplash_in_minimal_scandinavian_style_home_po_1e878cc3-6b81-4c61-b815-86e05c5f8cec.png?auto=compress&fit=fill"
               alt="Beveled subway style mirror tiles"
               style={{ width: '95%', maxWidth: '600px', height: 'auto' }}
             />
