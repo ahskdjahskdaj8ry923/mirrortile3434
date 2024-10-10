@@ -18,6 +18,13 @@ const InstallingMirrorTiles = () => {
     };
   }, []);
 
+  const noteStyle = {
+    backgroundColor: '#e9f5ff',
+    borderLeft: '4px solid #0070f3',
+    padding: '1em',
+    margin: '1em 0',
+  };
+
   return (
     <div className="container">
       <Head>
@@ -84,7 +91,6 @@ const InstallingMirrorTiles = () => {
             <li>Mirror adhesive (mirror mastic) or double-sided mirror tape</li>
             <li>Notched trowel (if using mastic)</li>
             <li>Tile spacers (1/16" recommended)</li>
-            <li>Glass cutter (if tiles need to be cut)</li>
             <li>Safety gear (gloves, safety glasses)</li>
             <li>Soft cloth</li>
             <li>Painter's tape</li>
@@ -143,33 +149,7 @@ const InstallingMirrorTiles = () => {
         </section>
 
         <section>
-          <h3>3. Cutting the Tiles (If Necessary)</h3>
-          <p>
-            For areas where full tiles won't fit, you'll need to cut mirror tiles to size:
-          </p>
-          <ul>
-            <li>Measure the space where the tile will fit, accounting for spacers and gaps.</li>
-            <li>
-              Mark the cut line on the tile using a straight edge and a non-permanent marker.
-            </li>
-            <li>
-              Use a glass cutter to score along the line, applying even pressure.
-            </li>
-            <li>
-              Snap the tile gently along the scored line.
-            </li>
-            <li>
-              Smooth any sharp edges with fine-grit sandpaper or a rubbing stone.
-            </li>
-          </ul>
-          <p>
-            <strong>Caution:</strong> Always wear safety glasses and gloves when cutting glass to
-            protect yourself from shards.
-          </p>
-        </section>
-
-        <section>
-          <h3>4. Applying Adhesive</h3>
+          <h3>3. Applying Adhesive</h3>
           <p>
             Choosing the right adhesive is vital to prevent damage to the mirror backing:
           </p>
@@ -188,7 +168,8 @@ const InstallingMirrorTiles = () => {
               Lay the mirror tile face down on a clean, soft surface.
             </li>
             <li>
-              Apply the mastic to the back of the tile in vertical lines or in a serpentine pattern, keeping it about 1 inch away from the edges to prevent squeeze-out.
+              Apply the mastic to the back of the tile in vertical lines or in a serpentine pattern,
+              keeping it about 1 inch away from the edges to prevent squeeze-out.
             </li>
             <li>
               Ensure an even layer of adhesive to prevent voids that could cause breakage or poor adhesion.
@@ -198,15 +179,22 @@ const InstallingMirrorTiles = () => {
             </li>
           </ul>
           <p>
-            <strong>Note:</strong> Do not apply adhesive too close to the edges, and avoid getting adhesive on the mirror surface. Wipe off any excess immediately with a soft cloth if accidental contact occurs.
+            <strong>Note:</strong> Do not apply adhesive too close to the edges, and avoid getting
+            adhesive on the mirror surface. Wipe off any excess immediately with a soft cloth if accidental contact occurs.
           </p>
         </section>
 
         <section>
-          <h3>5. Using Tile Spacers and Accounting for Thermal Expansion</h3>
+          <h3>4. Using Tile Spacers and Accounting for Thermal Expansion</h3>
           <p>
-            Allowing for a 1/16" gap between mirror tiles is essential to accommodate thermal expansion and prevent cracking:
+            Allowing for a 1/16" gap between mirror tiles is essential to accommodate{' '}
+            <strong>thermal expansion</strong> and prevent cracking:
           </p>
+          <div style={noteStyle}>
+            <strong>What is Thermal Expansion?</strong><br />
+            Thermal expansion refers to the tendency of materials to expand when heated and contract
+            when cooled. Providing gaps allows the mirror tiles to expand and contract without causing stress or cracks.
+          </div>
           <ul>
             <li>
               Use 1/16" tile spacers between each tile to maintain consistent gaps.
@@ -222,12 +210,13 @@ const InstallingMirrorTiles = () => {
             </li>
           </ul>
           <p>
-            <strong>Tip:</strong> For adhesive that takes longer to set, consider using painter's tape to hold tiles in position until the adhesive cures.
+            <strong>Tip:</strong> For adhesive that takes longer to set, consider using painter's
+            tape to hold tiles in position until the adhesive cures.
           </p>
         </section>
 
         <section>
-          <h3>6. Setting the Tiles</h3>
+          <h3>5. Setting the Tiles</h3>
           <p>
             Now it's time to place the tiles onto the wall:
           </p>
@@ -248,16 +237,18 @@ const InstallingMirrorTiles = () => {
               Continue the process, checking alignment frequently and adjusting as needed.
             </li>
             <li>
-              For tiles above the initial row, support may be needed until the adhesive sets. Use small nails or temporary supports if necessary, being careful not to damage the wall.
+              For tiles above the initial row, support may be needed until the adhesive sets. Use
+              painter's tape to hold them in place without damaging the wall or tiles.
             </li>
           </ul>
           <p>
-            <strong>Reminder:</strong> Work patiently and avoid rushing. Taking your time ensures a better finish.
+            <strong>Reminder:</strong> Work patiently and avoid rushing. Taking your time ensures a
+            better finish.
           </p>
         </section>
 
         <section>
-          <h3>7. Allow Adhesive to Cure</h3>
+          <h3>6. Allow Adhesive to Cure</h3>
           <p>
             Once all the tiles are in place:
           </p>
@@ -275,36 +266,9 @@ const InstallingMirrorTiles = () => {
         </section>
 
         <section>
-          <h3>8. Grouting the Gaps (Optional)</h3>
+          <h3>7. Finishing Touches</h3>
           <p>
-            If you want to fill the gaps between the mirror tiles:
-          </p>
-          <ul>
-            <li>
-              Use a non-acidic, neutral-cure silicone sealant to prevent damage to the mirror edges.
-            </li>
-            <li>
-              Load the sealant into a caulking gun for precise application.
-            </li>
-            <li>
-              Apply the sealant into the gaps, ensuring complete coverage.
-            </li>
-            <li>
-              Smooth the sealant with a gloved finger or a caulking tool for a neat finish.
-            </li>
-            <li>
-              Wipe away any excess sealant from the mirror surface immediately with a soft cloth.
-            </li>
-          </ul>
-          <p>
-            <strong>Note:</strong> Traditional grout is not recommended as it can scratch the mirror surface and damage the backing.
-          </p>
-        </section>
-
-        <section>
-          <h3>9. Finishing Touches</h3>
-          <p>
-            After all tiles are set and the adhesive and sealant (if used) are fully cured:
+            After all tiles are set and the adhesive is fully cured:
           </p>
           <ul>
             <li>
@@ -314,7 +278,7 @@ const InstallingMirrorTiles = () => {
               Install any trim or edging if desired to frame the mirror tiles and protect the edges.
             </li>
             <li>
-              Dispose of any leftover materials safely, especially sharp shards from tile cuts.
+              Dispose of any leftover materials safely, especially sharp shards if any tiles were broken during handling.
             </li>
           </ul>
           <p>
@@ -351,12 +315,12 @@ const InstallingMirrorTiles = () => {
                 </tr>
                 <tr style={{ backgroundColor: '#f9f9f9' }}>
                   <td style={{ border: '1px solid #ddd', padding: '0.5em', textAlign: 'center' }}>Moderate</td>
-                  <td style={{ border: '1px solid #ddd', padding: '0.5em' }}>Medium areas (2-3 feet), simple cuts, standard patterns, some obstacles.</td>
+                  <td style={{ border: '1px solid #ddd', padding: '0.5em' }}>Medium areas (2-3 feet), standard patterns, some obstacles.</td>
                   <td style={{ border: '1px solid #ddd', padding: '0.5em', textAlign: 'center' }}>4-6</td>
                 </tr>
                 <tr>
                   <td style={{ border: '1px solid #ddd', padding: '0.5em', textAlign: 'center' }}>Difficult</td>
-                  <td style={{ border: '1px solid #ddd', padding: '0.5em' }}>Large areas (&gt; 3 feet), intricate cuts, complex patterns, multiple obstacles (outlets, switches).</td>
+                  <td style={{ border: '1px solid #ddd', padding: '0.5em' }}>Large areas (&gt; 3 feet), complex patterns, multiple obstacles (outlets, switches).</td>
                   <td style={{ border: '1px solid #ddd', padding: '0.5em', textAlign: 'center' }}>7-8</td>
                 </tr>
                 <tr style={{ backgroundColor: '#f9f9f9' }}>
@@ -389,10 +353,10 @@ const InstallingMirrorTiles = () => {
               <strong>Work Safely:</strong> Wear appropriate safety gear, and make sure your work area is clear of tripping hazards.
             </li>
             <li>
-              <strong>Double-Check Measurements:</strong> Measure twice, cut once to avoid waste and ensure a perfect fit.
+              <strong>Double-Check Measurements:</strong> Measure twice to avoid mistakes and ensure a perfect fit.
             </li>
             <li>
-              <strong>Plan for Electrical Outlets and Fixtures:</strong> Cutouts for outlets or fixtures require precise measurements and careful cutting.
+              <strong>Plan for Electrical Outlets and Fixtures:</strong> If you have outlets or fixtures on the wall, you may need specialized tiles or professional assistance.
             </li>
             <li>
               <strong>Use Quality Materials:</strong> Invest in good-quality mirror tiles and adhesives for a long-lasting installation.
