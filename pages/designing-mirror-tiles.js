@@ -1,6 +1,23 @@
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function Thing1() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 600);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <div style={{ fontFamily: 'Arial, sans-serif', margin: '0 auto', maxWidth: '800px' }}>
       <Head>
@@ -8,6 +25,43 @@ export default function Thing1() {
         <meta name="description" content="Guide to Choosing the Right Mirror Tile" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <header
+        style={{
+          padding: '10px 20px',
+          backgroundColor: '#f8f9fa',
+          borderBottom: '1px solid #ddd',
+        }}
+      >
+        <nav
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            flexWrap: 'wrap',
+            gap: isMobile ? '10px' : '20px',
+          }}
+        >
+          <Link href="/designing-mirror-tiles">
+            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
+              Designing with Tiles
+            </span>
+          </Link>
+          <Link href="/diy-or-professional">
+            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
+              Going DIY or Professional
+            </span>
+          </Link>
+          <Link href="/setting-tiles">
+            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
+              Installing Tiles
+            </span>
+          </Link>
+          <Link href="/cleaning-and-maintenance">
+            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
+              Cleaning and Maintenance
+            </span>
+          </Link>
+        </nav>
+      </header>
       <main>
         <h1 style={{ fontSize: '36px', fontWeight: 'bold', marginBottom: '24px' }}>Design Phase</h1>
         <div id="Choosing_The_Right_Type_Of_Mirror_Tile" className="new"></div>
