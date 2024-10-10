@@ -1,14 +1,67 @@
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 const SettingTiles = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 600);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <div className="container">
       <Head>
         <title>Setting Tiles</title>
         <meta name="description" content="Guide for DIY Mirror Tile Installation" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="/styles.css" /> {/* Include your CSS */}
       </Head>
+      <header
+        style={{
+          padding: '10px 20px',
+          backgroundColor: '#f8f9fa',
+          borderBottom: '1px solid #ddd',
+        }}
+      >
+        <nav
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            flexWrap: 'wrap',
+            gap: isMobile ? '10px' : '20px',
+          }}
+        >
+          <Link href="/designing-mirror-tiles">
+            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
+              Designing with Tiles
+            </span>
+          </Link>
+          <Link href="/diy-or-professional">
+            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
+              Going DIY or Professional
+            </span>
+          </Link>
+          <Link href="/setting-tiles">
+            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
+              Installing Tiles
+            </span>
+          </Link>
+          <Link href="/cleaning-and-maintenance">
+            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
+              Cleaning and Maintenance
+            </span>
+          </Link>
+        </nav>
+      </header>
       <main style={{ fontFamily: 'Arial, sans-serif' }}>
         <div id="DIY_Techniques_And_Considerations_(separate_These)" className="new"></div>
         
