@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -29,6 +30,8 @@ export default function Thing1() {
           padding: '10px 20px',
           backgroundColor: '#f8f9fa',
           borderBottom: '1px solid #ddd',
+          maxWidth: '800px',
+          margin: '0 auto',
         }}
       >
         <nav
