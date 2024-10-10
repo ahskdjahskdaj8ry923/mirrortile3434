@@ -18,16 +18,23 @@ const CleaningAndMaintenance = () => {
     };
   }, []);
 
+  const noteStyle = {
+    backgroundColor: '#e9f5ff',
+    borderLeft: '4px solid #0070f3',
+    padding: '1em',
+    margin: '1em 0',
+  };
+
   return (
     <div className="container">
       <Head>
         <title>Cleaning and Maintenance</title>
-        <meta name="description" content="Guide for cleaning and maintaining mirror tiles" />
+        <meta name="description" content="Comprehensive guide for cleaning and maintaining mirror tiles" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header
         style={{
-          padding: '10px 20px',
+          padding: '1em',
           backgroundColor: '#f8f9fa',
           borderBottom: '1px solid #ddd',
         }}
@@ -37,87 +44,180 @@ const CleaningAndMaintenance = () => {
             display: 'flex',
             justifyContent: 'center',
             flexWrap: 'wrap',
-            gap: isMobile ? '10px' : '20px',
+            gap: isMobile ? '0.5em' : '1em',
           }}
         >
           <Link href="/designing-mirror-tiles">
-            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
+            <a style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
               Designing with Tiles
-            </span>
+            </a>
           </Link>
           <Link href="/diy-or-professional">
-            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
+            <a style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
               Going DIY or Professional
-            </span>
+            </a>
           </Link>
           <Link href="/setting-tiles">
-            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
+            <a style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
               Installing Tiles
-            </span>
+            </a>
           </Link>
           <Link href="/cleaning-and-maintenance">
-            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
+            <a style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
               Cleaning and Maintenance
-            </span>
+            </a>
           </Link>
         </nav>
       </header>
-      <main style={{ fontFamily: 'Arial, sans-serif' }}>
-        <div id="Cleaning_And_Maintenance" className="new"></div>
-        <h2 id="Cleaning_And_Maintenance">Cleaning And Maintenance</h2>
-        <div>
-          <p style={{ fontWeight: 'bold' }}>Cleaning and Maintaining Mirror Tiles</p>
-          <p>Cleaning and maintaining mirror tiles is similar to cleaning any other glass surface.</p>
-          <ul>
-            <li>Use a microfiber rag and everyday glass cleaning products.</li>
-            <li style={{ fontWeight: 'bold' }}>Important:</li>
-            Prevent moisture accumulation between tiles to avoid damage.
-          </ul>
-          <p style={{ fontWeight: 'bold' }}>Tips to Prevent Moisture Buildup:</p>
-          <ul>
-            <li>Use cleaning solutions sparingly.</li>
-            <li>Spray cleaning solution directly onto the rag instead of the glass.</li>
-          </ul>
-          <p>This prevents excess cleaning product from getting trapped behind the tiles and potentially causing damage.</p>
-        </div>
+      <main style={{ fontFamily: 'Arial, sans-serif', padding: '1em' }}>
+        <h1 style={{ textAlign: 'center', color: '#333' }}>Cleaning and Maintenance</h1>
 
-        <div id="Durability,_Replacements,_Glass_Cracking_From_Heat" className="new"></div>
-        <h2 id="Durability,_Replacements,_Glass_Cracking_From_Heat">Durability, Replacements, Glass Cracking From Heat</h2>
-        <div>
-          <p style={{ fontWeight: 'bold' }}>Glass is a fragile building material that requires special care and attention.</p>
-          <ul>
-            <li>Consider alternative materials in high-traffic areas.</li>
-            <li>For mirror tiles used as a kitchen backsplash, ensure they are far from heat sources like stoves.</li>
-            <ul>
-              <li>Heat can cause the glass to crack, even from a distance.</li>
-              <li>Heat can also damage the adhesive.</li>
-            </ul>
-          </ul>
-          <p style={{ fontWeight: 'bold' }}>Testing Heat:</p>
-          <ul>
-            <li>Use a touch test to gauge the heat.</li>
-            <li>For precise measurements, use an infrared thermometer (available online).</li>
-          </ul>
-        </div>
+        <section>
+          <h2>Maintaining Your Mirror Tiles</h2>
+          <p>
+            Proper cleaning and maintenance of mirror tiles not only keeps them looking pristine but also extends their lifespan.
+            Unlike regular mirrors, mirror tiles have edges and spaces where dust and moisture can accumulate, so they require some special attention.
+          </p>
+        </section>
 
-        <div id="Alternatives_That_Achieve_A_Similar_Look" className="new"></div>
-        <h2 id="Alternatives_That_Achieve_A_Similar_Look">Alternatives That Achieve A Similar Look</h2>
-        <div>
-          <p style={{ fontWeight: 'bold' }}>Alternative Materials for Achieving a Similar Look:</p>
+        <section>
+          <h3>Regular Cleaning Routine</h3>
+          <p>
+            Keeping your mirror tiles clean is essential for maintaining their reflective quality. Follow these steps for regular cleaning:
+          </p>
           <ul>
-            <li>Larger mirrors (as opposed to smaller tiles)</li>
-            <li>Ceramic tiles (typically found in bathrooms and kitchens)</li>
-            <li>Porcelain tiles</li>
-            <li>Various other tile products</li>
+            <li>
+              <strong>Use a microfiber cloth:</strong> Microfiber cloths are ideal for cleaning mirrors as they are soft and lint-free, preventing scratches and streaks.
+            </li>
+            <li>
+              <strong>Avoid abrasive materials:</strong> Do not use rough sponges or paper towels, which can scratch the mirror surface.
+            </li>
+            <li>
+              <strong>Choose the right cleaner:</strong> Use a mild glass cleaner or make your own by mixing equal parts distilled water and white vinegar.
+            </li>
+            <li>
+              <strong>Spray on the cloth, not the mirror:</strong> Spraying cleaner directly onto the mirror can cause excess liquid to seep into the edges or behind the tiles, potentially damaging the adhesive.
+            </li>
+            <li>
+              <strong>Wipe in a circular motion:</strong> Gently wipe the mirror tiles in a circular motion to remove smudges and fingerprints.
+            </li>
           </ul>
-          <p style={{ fontWeight: 'bold' }}>Highly Recommended Option:</p>
-          <p>Metal veneer (a thin layer of metal that is easy to install and visually appealing)</p>
-          <p style={{ fontWeight: 'bold' }}>Other Classic Options:</p>
+        </section>
+
+        <section>
+          <h3>Preventing Moisture Damage</h3>
+          <p>
+            Excess moisture can lead to deterioration of the mirror backing and adhesive failure. To prevent moisture-related issues:
+          </p>
           <ul>
-            <li>Wood</li>
-            <li>Paint</li>
+            <li>
+              <strong>Use minimal liquid:</strong> Limit the amount of cleaning solution used to avoid excess moisture.
+            </li>
+            <li>
+              <strong>Dry thoroughly:</strong> After cleaning, use a dry microfiber cloth to remove any remaining moisture.
+            </li>
+            <li>
+              <strong>Control humidity:</strong> In areas with high humidity, like bathrooms, use dehumidifiers or ensure proper ventilation.
+            </li>
           </ul>
-        </div>
+        </section>
+
+        <section>
+          <h3>Avoiding Damage from Heat and Sunlight</h3>
+          <p>
+            Heat and direct sunlight can affect mirror tiles adversely:
+          </p>
+          <ul>
+            <li>
+              <strong>Keep away from heat sources:</strong> Install mirror tiles at a safe distance from stoves, heaters, or fireplaces to prevent cracking due to thermal stress.
+            </li>
+            <li>
+              <strong>Protect from direct sunlight:</strong> Prolonged exposure to sunlight can cause discoloration or warping. Use window treatments to limit sun exposure if necessary.
+            </li>
+            <li>
+              <strong>Monitor temperature changes:</strong> Sudden temperature fluctuations can stress the mirrors. Maintain a consistent room temperature.
+            </li>
+          </ul>
+          <div style={noteStyle}>
+            <strong>What is Thermal Stress?</strong><br />
+            Thermal stress occurs when different parts of a material expand or contract at different rates due to temperature changes, potentially causing cracks or damage.
+          </div>
+        </section>
+
+        <section>
+          <h3>Handling Mirror Tiles with Care</h3>
+          <p>
+            Mirror tiles are fragile and require gentle handling:
+          </p>
+          <ul>
+            <li>
+              <strong>Avoid impact:</strong> Do not bang or knock items against the mirror tiles, as they can chip or crack.
+            </li>
+            <li>
+              <strong>Use caution when moving furniture:</strong> Be mindful when moving furniture near mirror tiles to prevent accidental damage.
+            </li>
+            <li>
+              <strong>Inspect regularly:</strong> Check for signs of damage or loosening tiles and address any issues promptly.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Dealing with Damage</h3>
+          <p>
+            If a mirror tile becomes damaged:
+          </p>
+          <ul>
+            <li>
+              <strong>Do not ignore it:</strong> Cracked or chipped tiles can be hazardous and should be replaced immediately.
+            </li>
+            <li>
+              <strong>Remove carefully:</strong> Wear gloves and goggles, and gently remove the damaged tile to prevent injury.
+            </li>
+            <li>
+              <strong>Prepare the surface:</strong> Clean the area where the old tile was removed before installing a new one.
+            </li>
+            <li>
+              <strong>Replace with matching tile:</strong> Use a tile of the same size and design to maintain the aesthetic.
+            </li>
+          </ul>
+          <p>
+            If unsure about replacing the tile yourself, consider hiring a professional.
+          </p>
+        </section>
+
+        <section>
+          <h3>Additional Maintenance Tips</h3>
+          <ul>
+            <li>
+              <strong>Avoid harsh chemicals:</strong> Do not use ammonia-based cleaners or bleach, as they can damage the mirror backing.
+            </li>
+            <li>
+              <strong>Edge protection:</strong> Consider sealing the edges of mirror tiles with a clear sealant to prevent moisture ingress.
+            </li>
+            <li>
+              <strong>Regular dusting:</strong> Gently dust mirror tiles with a soft cloth to prevent buildup of dust and dirt.
+            </li>
+            <li>
+              <strong>Mind the gaps:</strong> Ensure that any gaps or seams between tiles are clean and free from debris.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Understanding the Fragility of Glass</h3>
+          <p>
+            Glass is inherently fragile and requires special care:
+          </p>
+          <ul>
+            <li>
+              <strong>Be cautious with children and pets:</strong> Supervise activities near mirror tiles to prevent accidents.
+            </li>
+          </ul>
+          <p>
+            By treating mirror tiles with care, you can enjoy their beauty and functionality for years to come.
+          </p>
+        </section>
       </main>
     </div>
   );
