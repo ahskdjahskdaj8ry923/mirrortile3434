@@ -8,7 +8,7 @@ return (
 <title>Your Guide to Mirror Tiles – Modern Insights & Tips</title>
 <meta 
        name="description" 
-       content="Discover the ultimate guide on mirror tiles – from design inspiration and installation how-tos to cleaning and maintenance tips. Whether you’re DIY enthusiast or prefer professional installation, we’ve got you covered." 
+       content="Discover the ultimate guide on mirror tiles – from design inspiration and installation how-tos to cleaning and maintenance tips. Whether you’re a DIY enthusiast or prefer professional installation, we’ve got you covered." 
      />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="icon" href="/favicon.ico" />
@@ -105,7 +105,4 @@ return (
     </section>
   </main>
 </div>
-);
-}
-
-export default Home;
+); }
