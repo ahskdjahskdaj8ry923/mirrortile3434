@@ -1,173 +1,160 @@
 import Head from 'next/head';
-import Link from 'next/link'; // Import Link for routing
+import Link from 'next/link';
 
 const Home = () => {
   return (
     <div className="container">
       <Head>
         <title>Your Guide to Mirror Tiles</title>
-        <meta name="description" content="Comprehensive guide on mirror tiles for your home" />
+        <meta name="description" content="Easy guide on mirror tiles for your home" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="/styles.css" /> {/* Include your CSS */}
       </Head>
-      <main style={{ fontFamily: 'Arial, sans-serif' }}>
-        <h1>Your Guide to Mirror Tiles</h1>
-        <p>This is a simple guide for deciding whether or not mirror tiles are the right product to put in your home. My goal is to provide as detailed a webpage as possible, helping you understand all the considerations, starting with design and ending with maintenance.</p>
-        <p>I'll also talk in detail about the pros and cons of DIY vs. professional installation. If you have a question not covered on the page, use the "question" box below to send me a question. I'll try to get back to you within one business day.</p>
-        
-        <h2 id="Sections">Sections</h2>
-        <ul>
-          <li className="show">
-            <p>
-              <Link href="/designing-mirror-tiles">Designing with Tiles</Link>
-            </p>
+
+      <h1>Welcome to Your Mirror Tile Guide!</h1>
+      <p>
+        Thinking about adding mirror tiles to your home? This guide will help you figure out if they're right for you. 
+        We'll walk you through everything from picking the right tiles to keeping them clean.
+      </p>
+      <p>
+        We'll also help you decide whether to install them yourself or hire someone. 
+        Got questions? Just ask - we'll get back to you within one business day!
+      </p>
+      
+      <h2 id="Sections">What You'll Learn</h2>
+      <div style={{
+        backgroundColor: '#e0f7fa',
+        border: '3px solid #000080',
+        padding: '20px',
+        marginBottom: '30px',
+        textAlign: 'center'
+      }}>
+        <ul style={{ listStyleType: 'none', padding: 0, fontSize: '1.1em' }}>
+          <li style={{ marginBottom: '15px' }}>
+            <Link href="/designing-mirror-tiles" style={{ 
+              color: '#000080', 
+              textDecoration: 'none', 
+              fontWeight: 'bold',
+              fontSize: '1.2em'
+            }}>
+              🎨 How to Pick the Right Tiles
+            </Link>
           </li>
-          <li className="show">
-            <p>
-              <Link href="/diy-or-professional">Going DIY or Professional</Link>
-            </p>
+          <li style={{ marginBottom: '15px' }}>
+            <Link href="/diy-or-professional" style={{ 
+              color: '#000080', 
+              textDecoration: 'none', 
+              fontWeight: 'bold',
+              fontSize: '1.2em'
+            }}>
+              🔨 DIY or Hire a Pro?
+            </Link>
           </li>
-          <li className="show">
-            <p>
-              <Link href="/setting-tiles">Installing Tiles</Link>
-            </p>
+          <li style={{ marginBottom: '15px' }}>
+            <Link href="/setting-tiles" style={{ 
+              color: '#000080', 
+              textDecoration: 'none', 
+              fontWeight: 'bold',
+              fontSize: '1.2em'
+            }}>
+              📐 How to Install Them
+            </Link>
           </li>
-          <li className="show">
-            <p>
-              <Link href="/cleaning-and-maintenance">Cleaning and Maintenance</Link>
-            </p>
+          <li>
+            <Link href="/cleaning-and-maintenance" style={{ 
+              color: '#000080', 
+              textDecoration: 'none', 
+              fontWeight: 'bold',
+              fontSize: '1.2em'
+            }}>
+              🧽 Keeping Them Clean
+            </Link>
           </li>
         </ul>
+      </div>
 
-        <div id="Some_Things_To_Consider_About_Mirror_Tiles" className="new"></div>
-        <h2 id="Some_Things_To_Consider_About_Mirror_Tiles">Some Things To Consider About Mirror Tiles</h2>
+      <h2>Things to Think About First</h2>
+      <div style={{
+        backgroundColor: '#FFE4B5',
+        border: '3px solid #FF0000',
+        padding: '20px',
+        marginBottom: '30px'
+      }}>
+        <p style={{ fontSize: '1.1em', lineHeight: '1.6' }}>
+          Mirror tiles can make your room look bigger and brighter, but there are some things you should know first:
+        </p>
+        
+        <h3 style={{ color: '#FF0000', fontSize: '1.3em' }}>
+          Cheap Tiles, But Installation Can Be Pricey
+        </h3>
+        <ul style={{ fontSize: '1em', lineHeight: '1.5' }}>
+          <li>
+            ✅ <strong>Good news:</strong> Mirror tiles are small and cheap to buy online or at stores.
+          </li>
+          <li>
+            ⚠️ <strong>But watch out:</strong> Installing them properly can cost a lot because mirrors are tricky to work with.
+          </li>
+        </ul>
+      </div>
+      
+      <div style={{
+        backgroundColor: '#F0F8FF',
+        border: '2px solid #000080',
+        padding: '20px',
+        marginBottom: '30px'
+      }}>
+        <h2 style={{ fontSize: '1.5em', marginTop: 0 }}>
+          Quick Facts You Should Know
+        </h2>
+        <div style={{ fontSize: '1em', lineHeight: '1.6' }}>
+          <p>
+            <strong>1. They Won't Look Perfect:</strong> All mirror tiles bend a little, so your reflection might look slightly wavy. Thicker tiles are better but cost more.
+          </p>
+          <p>
+            <strong>2. Installation is Tricky:</strong> Even experienced tile installers might struggle with mirrors. They need special techniques.
+          </p>
+          <p>
+            <strong>3. Total Cost Adds Up:</strong> While the tiles are cheap, the final project might cost as much as a big mirror.
+          </p>
+          <p>
+            <strong>4. They Break Easily:</strong> Thin mirror tiles can crack from bumps or heat, so handle with care.
+          </p>
+        </div>
+      </div>
+
+      <div style={{ textAlign: 'center', margin: '30px 0' }}>
+        <img
+          src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fb8e0c18ce21bae7b3e641b6a37ff3f4a.cdn.bubble.io%2Ff1717729830743x200278486618245900%2Fmirror-distortion.png?auto=compress&fit=fill"
+          alt="mirror distortion example"
+          style={{ 
+            width: '90%', 
+            maxWidth: '500px', 
+            height: 'auto',
+            border: '5px solid #000000',
+            boxShadow: '5px 5px 10px #888888'
+          }}
+        />
+        <p style={{ textAlign: 'center', fontStyle: 'italic', color: '#696969' }}>
+          See how the reflection looks wavy? That's normal with mirror tiles.
+        </p>
+      </div>
+      
+      <div style={{ marginTop: '40px' }}>
+        <h2>Other Options to Consider</h2>
         <div style={{
-          backgroundColor: '#e0f7fa',
-          color: '#006064',
-          padding: '40px 20px',
-          marginBottom: '40px',
-          borderRadius: '8px'
+          backgroundColor: '#F5F5DC',
+          border: '2px solid #8B4513',
+          padding: '20px'
         }}>
-          <p style={{
-            fontSize: '20px',
-            lineHeight: '1.6',
-            marginBottom: '24px',
-            fontWeight: 300,
-            textAlign: 'center'
-          }}>
-            When it comes to using mirrored tiles in a home installation, there are a few things worth reviewing. Here are some drawbacks of choosing mirrored tiles over other reflective surfaces:
-          </p>
-          <h3 style={{
-            fontSize: '28px',
-            marginTop: 0,
-            marginBottom: '24px',
-            textAlign: 'center',
-            fontWeight: 'bold'
-          }}>
-            Affordability vs. Installation Costs
-          </h3>
-          <ul style={{ listStyleType: 'none', padding: 0 }}>
-            <li style={{
-              fontSize: '20px',
-              lineHeight: '1.6',
-              marginBottom: '16px',
-              position: 'relative',
-              paddingLeft: '25px'
-            }}>
-              <span style={{ position: 'absolute', left: 0, top: 0 }}>&#9679;</span>
-              Mirror tiles are small, making them easy to warehouse and ship. This makes them readily available online and in stores at inexpensive prices.
-            </li>
-            <li style={{
-              fontSize: '20px',
-              lineHeight: '1.6',
-              position: 'relative',
-              paddingLeft: '25px'
-            }}>
-              <span style={{ position: 'absolute', left: 0, top: 0 }}>&#9679;</span>
-              However, while the tiles themselves are cheap, the installation process can be expensive. Mirror is a fragile and difficult building material to work with, requiring skilled labor for a polished look.
-            </li>
-          </ul>
-          <p style={{
-            fontSize: '20px',
-            lineHeight: '1.6',
-            marginTop: '32px',
-            textAlign: 'center'
-          }}>
-            Continue reading the next section for important factors to consider before beginning your mirror tile project.
-          </p>
-        </div>
-        
-        <div>
-          <h2 style={{
-            fontSize: '24px',
-            fontWeight: 'bold',
-            marginBottom: '16px'
-          }}>
-            Mirror Tile Project Considerations
-          </h2>
-          <p style={{
-            fontSize: '18px',
-            lineHeight: '1.5',
-            marginBottom: '8px'
-          }}>
-            <strong>1. Distortion:</strong> All mirror tiles have distortion, primarily due to the glue used to bond them to the surface. This creates a high spot in each tile. While thicker glass reduces distortion, it's almost always present.
-          </p>
-          <p style={{
-            fontSize: '18px',
-            lineHeight: '1.5',
-            marginBottom: '8px'
-          }}>
-            <strong>2. Installation:</strong> Mirror tile installation is unique compared to other tiled products. Experienced tile setters might not have the specific technique for mirror tiles. Techniques that work for ceramic tiles might not be effective for mirror tiles.
-          </p>
-          <p style={{
-            fontSize: '18px',
-            lineHeight: '1.5',
-            marginBottom: '8px'
-          }}>
-            <strong>3. Cost:</strong> Despite being inexpensive, the complexity of installing mirror tiles can make the overall project cost comparable to, or even more expensive than, using a single large mirror.
-          </p>
-          <p style={{
-            fontSize: '18px',
-            lineHeight: '1.5',
-            marginBottom: '8px'
-          }}>
-            <strong>4. Fragility:</strong> Mirror tiles, especially those made from thin glass, are fragile and susceptible to breaking due to impacts or heat exposure. This is a common concern for all glass products, but it's more prominent with thinner glass.
-          </p>
-        </div>
-
-        <h2 className="hidden"></h2>
-        <span className="abovecap"></span>
-        <div style={{ textAlign: 'center', margin: '20px 0' }}>
-          <a href="#" target="_blank" rel="noopener">
-            <img
-              className="aligncenter"
-              title=""
-              src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fb8e0c18ce21bae7b3e641b6a37ff3f4a.cdn.bubble.io%2Ff1717729830743x200278486618245900%2Fmirror-distortion.png?auto=compress&fit=fill"
-              alt="mirror distortion"
-              style={{ width: '95%', maxWidth: '95%', height: 'auto' }}
-            />
-          </a>
-        </div>
-        <p className="cap" style={{ textAlign: 'center', fontStyle: 'italic' }}>a classic case of mirror distortion...</p>
-        
-        <div id="Alternatives_That_Achieve_A_Similar_Look" style={{ marginTop: '40px' }}>
-          <h2>Alternatives That Achieve A Similar Look</h2>
-          <p style={{ fontWeight: 'bold' }}>Alternative Materials for Achieving a Similar Look:</p>
-          <ul>
-            <li>Larger mirrors (as opposed to smaller tiles)</li>
-            <li>Ceramic tiles (typically found in bathrooms and kitchens)</li>
-            <li>Porcelain tiles</li>
-            <li>Various other tile products</li>
-          </ul>
-          <p style={{ fontWeight: 'bold' }}>Highly Recommended Option:</p>
-          <p>Metal veneer (a thin layer of metal that is easy to install and visually appealing)</p>
-          <p style={{ fontWeight: 'bold' }}>Other Classic Options:</p>
-          <ul>
-            <li>Wood</li>
-            <li>Paint</li>
+          <p style={{ fontWeight: 'bold', color: '#8B4513' }}>Instead of mirror tiles, you could try:</p>
+          <ul style={{ fontSize: '1em' }}>
+            <li>One big mirror (easier to install)</li>
+            <li>Regular ceramic or porcelain tiles</li>
+            <li>Metal sheets (shiny and easy to put up)</li>
+            <li>Just paint the wall a nice color</li>
+            <li>Wood paneling for a classic look</li>
           </ul>
         </div>
-      </main>
+      </div>
     </div>
   );
 }
