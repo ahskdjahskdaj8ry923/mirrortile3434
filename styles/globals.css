@@ -19,12 +19,20 @@ body {
  background-color: #f4f4f4; /* Grungy off-white background */
  font-family: 'Arial', 'Courier New', monospace; /* Classic 90s fonts */
  margin: 0;
- padding: 10%; /* 10% padding on all sides */
+ padding: 0; /* Remove default padding since we have fixed header */
  font-size: 17px;
  text-align: left;
  color: #000000; /* Very dark gray, almost black text */
+ min-height: 100vh;
+}
+
+/* Main content container */
+main {
  max-width: 700px;
- margin: 0 auto; /* Center the content */
+ margin: 180px auto 0 auto; /* Account for fixed header and nav */
+ padding: 20px;
+ background-color: #f7f7f7;
+ min-height: calc(100vh - 300px); /* Ensure main content takes up space */
 }
 
 /* Link styles */
@@ -37,63 +45,13 @@ a:visited {
  color: #800080; /* Visited link - purple! */
 }
 
-/* Container styles */
+/* Content area styles */
 .container {
  display: flex;
  flex-direction: column;
- justify-content: center;
+ justify-content: flex-start;
  align-items: center;
-}
-
-/* Header styles */
-header {
- background-color: #000080; /* Dark blue, a 90s staple */
- color: #FFFF00; /* Bright yellow for contrast */
- padding: 20px 0;
- text-align: center;
- width: 100%; /* Full width */
- position: fixed; /* Make the header stick to the top */
- top: 0; 
- z-index: 100; /* Ensure header stays on top */
-}
-
-/* Heading styles */
-h1, h2, h3, h4, h5, h6 {
- text-align: center;
-}
-
-h1 {
- font-size: 3em;
- text-shadow: 2px 2px 4px #000000; 
- margin-top:2em;
-}
-
-/* Add more space *above* h2s */
-h2 {
- font-size: 2em;
- color: #FF0000; /* Red h2 for that extra 90s touch */
- margin-top: 2em; /* Add space above */
- margin-bottom: 0; /* Remove space below h2 */
-}
-
-/* Navigation styles */
-nav {
- background-color: #D3D3D3; /* Light gray for the win! */
- padding: 10px 0;
- text-align: center;
-}
-
-nav a {
- color: #000080; 
- margin: 0 15px;
- text-decoration: none;
- font-weight: bold;
-}
-
-/* Content area styles */
-main {
- padding: 20px;
- background-color:#f7f7f7;
+ min-height: 100vh;
 }
 
 /* Image styles */
@@ -136,16 +94,31 @@ th {
  background-color: #A9A9A9; /* Dark gray table header */
 }
 
-/* Footer styles */
-footer {
- background-color: #000080;
- color: #ffff00;
- padding: 10px 0;
- clear: both;
- position: relative;
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
  text-align: center;
- bottom: 0; /* Fix footer to the bottom */
- width: 100%;
+}
+
+h1 {
+ font-size: 2.5em;
+ text-shadow: 2px 2px 4px #000000; 
+ margin: 0.5em 0;
+ color: #000080;
+}
+
+/* Add more space *above* h2s */
+h2 {
+ font-size: 1.8em;
+ color: #FF0000; /* Red h2 for that extra 90s touch */
+ margin-top: 1.5em; /* Add space above */
+ margin-bottom: 0.5em;
+}
+
+h3 {
+ font-size: 1.4em;
+ color: #000080;
+ margin-top: 1em;
+ margin-bottom: 0.5em;
 }
 
 /* Copyright text styles */
