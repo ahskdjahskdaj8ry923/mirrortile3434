@@ -12,6 +12,33 @@ const InstallingMirrorTiles = () => {
 
       <h1>📐 How to Install Your Mirror Tiles</h1>
 
+      {/* Safety Disclaimer */}
+      <div style={{
+        backgroundColor: '#FFCCCB',
+        border: '3px solid #FF0000',
+        padding: '20px',
+        marginBottom: '30px',
+        borderRadius: '8px'
+      }}>
+        <h3 style={{ color: '#FF0000', fontSize: '1.4em', marginTop: 0 }}>
+          🚨 CRITICAL SAFETY WARNING 🚨
+        </h3>
+        <p style={{ fontSize: '1.1em', lineHeight: '1.6', fontWeight: 'bold', color: '#CC0000' }}>
+          This installation guide involves working with glass and hazardous chemicals. READ ALL SAFETY WARNINGS before starting.
+        </p>
+        <ul style={{ fontSize: '1em', lineHeight: '1.6' }}>
+          <li><strong>ALWAYS wear safety equipment:</strong> Safety glasses, heavy-duty gloves, long sleeves, and closed-toe shoes.</li>
+          <li><strong>Work in ventilated areas:</strong> Adhesive fumes can be toxic. Open windows and use fans.</li>
+          <li><strong>Handle glass with extreme care:</strong> Mirror tiles can cause deep cuts. Move slowly and deliberately.</li>
+          <li><strong>Have emergency supplies ready:</strong> First aid kit, emergency contact numbers, and know where nearest hospital is.</li>
+          <li><strong>Never work alone:</strong> Have someone nearby in case of emergency.</li>
+          <li><strong>Know your limits:</strong> If you're uncomfortable at any point, STOP and call a professional.</li>
+        </ul>
+        <p style={{ fontSize: '1em', fontStyle: 'italic', color: '#CC0000' }}>
+          <strong>Disclaimer:</strong> These instructions are for reference only. We are not responsible for injuries, damage, or installation failures. Consider hiring a professional glazier for best results and safety.
+        </p>
+      </div>
+
       <section>
         <h2>Getting Ready</h2>
         <p>
