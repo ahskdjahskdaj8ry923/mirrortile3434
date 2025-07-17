@@ -1,224 +1,237 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
 const CleaningAndMaintenance = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 600);
-    };
-
-    window.addEventListener('resize', handleResize);
-    handleResize();
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  const noteStyle = {
-    backgroundColor: '#e9f5ff',
-    borderLeft: '4px solid #0070f3',
-    padding: '1em',
-    margin: '1em 0',
-  };
-
   return (
     <div className="container">
       <Head>
-        <title>Cleaning and Maintenance</title>
-        <meta name="description" content="Comprehensive guide for cleaning and maintaining mirror tiles" />
+        <title>How to Keep Mirror Tiles Clean</title>
+        <meta name="description" content="Easy tips for cleaning and taking care of your mirror tiles" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header
-        style={{
-          padding: '1em',
-          backgroundColor: '#f8f9fa',
-          borderBottom: '1px solid #ddd',
-        }}
-      >
-        <nav
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            flexWrap: 'wrap',
-            gap: isMobile ? '0.5em' : '1em',
-          }}
-        >
-          <Link href="/designing-mirror-tiles">
-            <a style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
-              Designing with Tiles
-            </a>
-          </Link>
-          <Link href="/diy-or-professional">
-            <a style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
-              Going DIY or Professional
-            </a>
-          </Link>
-          <Link href="/setting-tiles">
-            <a style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
-              Installing Tiles
-            </a>
-          </Link>
-          <Link href="/cleaning-and-maintenance">
-            <a style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
-              Cleaning and Maintenance
-            </a>
-          </Link>
-        </nav>
-      </header>
-      <main style={{ fontFamily: 'Arial, sans-serif', padding: '1em' }}>
-        <h1 style={{ textAlign: 'center', color: '#333' }}>Cleaning and Maintenance</h1>
 
-        <section>
-          <h2>Maintaining Your Mirror Tiles</h2>
-          <p>
-            Proper cleaning and maintenance of mirror tiles not only keeps them looking pristine but also extends their lifespan.
-            Unlike regular mirrors, mirror tiles have edges and spaces where dust and moisture can accumulate, so they require some special attention.
-          </p>
-        </section>
+      <h1>🧽 Keeping Your Mirror Tiles Sparkling</h1>
 
-        <section>
-          <h3>Regular Cleaning Routine</h3>
-          <p>
-            Keeping your mirror tiles clean is essential for maintaining their reflective quality. Follow these steps for regular cleaning:
+      <section>
+        <h2>Why Cleaning Mirror Tiles is Different</h2>
+        <p>
+          Mirror tiles need a bit more care than regular mirrors because they have edges and gaps where dust and moisture can hide. But don't worry - with the right approach, keeping them clean is easy!
+        </p>
+      </section>
+
+      <section>
+        <h3>🧽 Your Regular Cleaning Routine</h3>
+        <div style={{
+          backgroundColor: '#F0F8FF',
+          border: '3px solid #000080',
+          padding: '20px',
+          marginBottom: '20px'
+        }}>
+          <p style={{ fontSize: '1.2em', fontWeight: 'bold', color: '#000080' }}>
+            The Right Way to Clean Mirror Tiles:
           </p>
-          <ul>
+          <ul style={{ fontSize: '1.1em', lineHeight: '1.6' }}>
             <li>
-              <strong>Use a microfiber cloth:</strong> Microfiber cloths are ideal for cleaning mirrors as they are soft and lint-free, preventing scratches and streaks.
+              🧽 <strong>Use a microfiber cloth:</strong> Soft and won't scratch your mirrors
             </li>
             <li>
-              <strong>Avoid abrasive materials:</strong> Do not use rough sponges or paper towels, which can scratch the mirror surface.
+              ❌ <strong>Avoid paper towels:</strong> They can leave scratches and lint
             </li>
             <li>
-              <strong>Choose the right cleaner:</strong> Use a mild glass cleaner or make your own by mixing equal parts distilled water and white vinegar.
+              🧴 <strong>Use glass cleaner or make your own:</strong> Mix equal parts water and white vinegar
             </li>
             <li>
-              <strong>Spray on the cloth, not the mirror:</strong> Spraying cleaner directly onto the mirror can cause excess liquid to seep into the edges or behind the tiles, potentially damaging the adhesive.
+              💦 <strong>Spray the cloth, not the mirror:</strong> This prevents liquid from getting behind the tiles
             </li>
             <li>
-              <strong>Wipe in a circular motion:</strong> Gently wipe the mirror tiles in a circular motion to remove smudges and fingerprints.
+              🔄 <strong>Wipe in circles:</strong> Gentle circular motions work best
             </li>
           </ul>
-        </section>
+        </div>
+      </section>
 
-        <section>
-          <h3>Preventing Moisture Damage</h3>
-          <p>
-            Excess moisture can lead to deterioration of the mirror backing and adhesive failure. To prevent moisture-related issues:
+      <section>
+        <h3>💧 Keep Water Away from the Edges</h3>
+        <div style={{
+          backgroundColor: '#FFE4B5',
+          border: '3px solid #FF0000',
+          padding: '20px',
+          marginBottom: '20px'
+        }}>
+          <p style={{ color: '#FF0000', fontWeight: 'bold', fontSize: '1.2em' }}>
+            ⚠️ Too much water = big problems!
           </p>
-          <ul>
-            <li>
-              <strong>Use minimal liquid:</strong> Limit the amount of cleaning solution used to avoid excess moisture.
-            </li>
-            <li>
-              <strong>Dry thoroughly:</strong> After cleaning, use a dry microfiber cloth to remove any remaining moisture.
-            </li>
-            <li>
-              <strong>Control humidity:</strong> In areas with high humidity, like bathrooms, use dehumidifiers or ensure proper ventilation.
-            </li>
+          <p>Water can get behind your tiles and damage the glue or the mirror backing. Here's how to avoid this:</p>
+          <ul style={{ fontSize: '1.1em' }}>
+            <li>💧 <strong>Use just a little cleaner:</strong> A damp cloth is better than a soaking wet one</li>
+            <li>🧽 <strong>Dry right away:</strong> Use a dry cloth after cleaning</li>
+            <li>🌬️ <strong>Keep air flowing:</strong> Use fans or open windows in bathrooms</li>
           </ul>
-        </section>
+        </div>
+      </section>
 
-        <section>
-          <h3>Avoiding Damage from Heat and Sunlight</h3>
-          <p>
-            Heat and direct sunlight can affect mirror tiles adversely:
-          </p>
-          <ul>
-            <li>
-              <strong>Keep away from heat sources:</strong> Install mirror tiles at a safe distance from stoves, heaters, or fireplaces to prevent cracking due to thermal stress.
-            </li>
-            <li>
-              <strong>Protect from direct sunlight:</strong> Prolonged exposure to sunlight can cause discoloration or warping. Use window treatments to limit sun exposure if necessary.
-            </li>
-            <li>
-              <strong>Monitor temperature changes:</strong> Sudden temperature fluctuations can stress the mirrors. Maintain a consistent room temperature.
-            </li>
+      <section>
+        <h3>🌡️ Protect from Heat and Sun</h3>
+        <div style={{
+          backgroundColor: '#F5F5DC',
+          border: '2px solid #8B4513',
+          padding: '20px',
+          marginBottom: '20px'
+        }}>
+          <p><strong>Heat and sunlight can damage your mirror tiles:</strong></p>
+          <ul style={{ fontSize: '1.1em' }}>
+            <li>🔥 <strong>Keep away from stoves and heaters:</strong> Heat can crack the glass</li>
+            <li>☀️ <strong>Block direct sunlight:</strong> Use curtains or blinds if needed</li>
+            <li>🌡️ <strong>Avoid sudden temperature changes:</strong> Don't blast hot or cold air directly on them</li>
           </ul>
-          <div style={noteStyle}>
-            <strong>What is Thermal Stress?</strong><br />
-            Thermal stress occurs when different parts of a material expand or contract at different rates due to temperature changes, potentially causing cracks or damage.
+          <div style={{
+            backgroundColor: '#e9f5ff',
+            borderLeft: '4px solid #0070f3',
+            padding: '15px',
+            marginTop: '15px'
+          }}>
+            <p><strong>What's thermal stress?</strong></p>
+            <p>When things get hot, they expand. When they get cold, they shrink. If this happens too fast, glass can crack!</p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section>
-          <h3>Handling Mirror Tiles with Care</h3>
-          <p>
-            Mirror tiles are fragile and require gentle handling:
-          </p>
-          <ul>
-            <li>
-              <strong>Avoid impact:</strong> Do not bang or knock items against the mirror tiles, as they can chip or crack.
-            </li>
-            <li>
-              <strong>Use caution when moving furniture:</strong> Be mindful when moving furniture near mirror tiles to prevent accidental damage.
-            </li>
-            <li>
-              <strong>Inspect regularly:</strong> Check for signs of damage or loosening tiles and address any issues promptly.
-            </li>
+      <section>
+        <h3>🛡️ Handle with Care</h3>
+        <div style={{
+          backgroundColor: '#e0f7fa',
+          border: '3px solid #000080',
+          padding: '20px',
+          marginBottom: '20px'
+        }}>
+          <p><strong>Mirror tiles are fragile - treat them gently:</strong></p>
+          <ul style={{ fontSize: '1.1em' }}>
+            <li>👀 <strong>Watch for chips or cracks:</strong> Check them regularly</li>
+            <li>🚫 <strong>Don't bang things against them:</strong> Be careful when moving furniture</li>
+            <li>🔍 <strong>Fix problems quickly:</strong> A small crack can become a big problem</li>
           </ul>
-        </section>
+        </div>
+      </section>
 
-        <section>
-          <h3>Dealing with Damage</h3>
-          <p>
-            If a mirror tile becomes damaged:
+      <section>
+        <h3>🔧 When a Tile Gets Damaged</h3>
+        <div style={{
+          backgroundColor: '#FFB6C1',
+          border: '3px solid #DC143C',
+          padding: '20px',
+          marginBottom: '20px'
+        }}>
+          <p style={{ color: '#DC143C', fontWeight: 'bold' }}>
+            🚨 Don't ignore broken tiles - they can be dangerous!
           </p>
-          <ul>
-            <li>
-              <strong>Do not ignore it:</strong> Cracked or chipped tiles can be hazardous and should be replaced immediately.
-            </li>
-            <li>
-              <strong>Remove carefully:</strong> Wear gloves and goggles, and gently remove the damaged tile to prevent injury.
-            </li>
-            <li>
-              <strong>Prepare the surface:</strong> Clean the area where the old tile was removed before installing a new one.
-            </li>
-            <li>
-              <strong>Replace with matching tile:</strong> Use a tile of the same size and design to maintain the aesthetic.
-            </li>
-          </ul>
-          <p>
-            If unsure about replacing the tile yourself, consider hiring a professional.
+          <p><strong>Here's what to do:</strong></p>
+          <ol style={{ fontSize: '1.1em' }}>
+            <li>🥽 <strong>Put on safety gear:</strong> Gloves and safety glasses</li>
+            <li>🗑️ <strong>Remove the broken tile carefully:</strong> Work slowly to avoid cuts</li>
+            <li>🧽 <strong>Clean the area:</strong> Remove old glue and debris</li>
+            <li>🆕 <strong>Install a new tile:</strong> Make sure it matches the others</li>
+          </ol>
+          <p style={{ color: '#DC143C', fontWeight: 'bold' }}>
+            Not sure how to do this safely? Call a professional!
           </p>
-        </section>
+        </div>
+      </section>
 
-        <section>
-          <h3>Additional Maintenance Tips</h3>
-          <ul>
-            <li>
-              <strong>Avoid harsh chemicals:</strong> Do not use ammonia-based cleaners or bleach, as they can damage the mirror backing.
-            </li>
-            <li>
-              <strong>Edge protection:</strong> Consider sealing the edges of mirror tiles with a clear sealant to prevent moisture ingress.
-            </li>
-            <li>
-              <strong>Regular dusting:</strong> Gently dust mirror tiles with a soft cloth to prevent buildup of dust and dirt.
-            </li>
-            <li>
-              <strong>Mind the gaps:</strong> Ensure that any gaps or seams between tiles are clean and free from debris.
-            </li>
+      <section>
+        <h3>🧴 What NOT to Use</h3>
+        <div style={{
+          backgroundColor: '#F0F0F0',
+          border: '3px solid #808080',
+          padding: '20px',
+          marginBottom: '20px'
+        }}>
+          <p style={{ fontWeight: 'bold', fontSize: '1.2em' }}>
+            ❌ These can damage your mirror tiles:
+          </p>
+          <ul style={{ fontSize: '1.1em', color: '#800000' }}>
+            <li>🚫 <strong>Ammonia-based cleaners:</strong> Can damage the mirror backing</li>
+            <li>🚫 <strong>Bleach:</strong> Too harsh for mirrors</li>
+            <li>🚫 <strong>Abrasive sponges:</strong> Will scratch the surface</li>
+            <li>🚫 <strong>Steel wool:</strong> Will ruin your mirrors</li>
+            <li>🚫 <strong>Acid-based cleaners:</strong> Can eat away at the backing</li>
           </ul>
-        </section>
+        </div>
+      </section>
 
-        <section>
-          <h3>Understanding the Fragility of Glass</h3>
-          <p>
-            Glass is inherently fragile and requires special care:
-          </p>
-          <ul>
-            <li>
-              <strong>Be cautious with children and pets:</strong> Supervise activities near mirror tiles to prevent accidents.
-            </li>
+      <section>
+        <h3>📅 Your Cleaning Schedule</h3>
+        <div style={{
+          backgroundColor: '#F0F8FF',
+          border: '2px solid #000080',
+          padding: '20px',
+          marginBottom: '20px'
+        }}>
+          <table style={{ 
+            width: '100%', 
+            borderCollapse: 'collapse',
+            border: '2px solid #000080'
+          }}>
+            <thead>
+              <tr style={{ backgroundColor: '#D3D3D3' }}>
+                <th style={{ border: '1px solid #000080', padding: '10px' }}>How Often</th>
+                <th style={{ border: '1px solid #000080', padding: '10px' }}>What to Do</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style={{ border: '1px solid #000080', padding: '8px', fontWeight: 'bold' }}>Daily</td>
+                <td style={{ border: '1px solid #000080', padding: '8px' }}>Wipe away any splashes or fingerprints</td>
+              </tr>
+              <tr style={{ backgroundColor: '#f9f9f9' }}>
+                <td style={{ border: '1px solid #000080', padding: '8px', fontWeight: 'bold' }}>Weekly</td>
+                <td style={{ border: '1px solid #000080', padding: '8px' }}>Full cleaning with glass cleaner and microfiber cloth</td>
+              </tr>
+              <tr>
+                <td style={{ border: '1px solid #000080', padding: '8px', fontWeight: 'bold' }}>Monthly</td>
+                <td style={{ border: '1px solid #000080', padding: '8px' }}>Check for loose tiles, clean the gaps between tiles</td>
+              </tr>
+              <tr style={{ backgroundColor: '#f9f9f9' }}>
+                <td style={{ border: '1px solid #000080', padding: '8px', fontWeight: 'bold' }}>As Needed</td>
+                <td style={{ border: '1px solid #000080', padding: '8px' }}>Deep clean or replace damaged tiles</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h3>👶 Extra Tips for Families</h3>
+        <div style={{
+          backgroundColor: '#FFE4B5',
+          border: '2px solid #FF0000',
+          padding: '20px'
+        }}>
+          <ul style={{ fontSize: '1.1em' }}>
+            <li>👶 <strong>Watch kids around mirror tiles:</strong> Teach them to be gentle</li>
+            <li>🐕 <strong>Pet-proof if needed:</strong> Some pets might scratch or bump into them</li>
+            <li>🎾 <strong>No ball games near mirrors:</strong> Keep sports away from your tiles</li>
+            <li>🧽 <strong>Clean up spills quickly:</strong> Don't let them sit and cause problems</li>
           </ul>
-          <p>
-            By treating mirror tiles with care, you can enjoy their beauty and functionality for years to come.
+        </div>
+      </section>
+
+      <section>
+        <div style={{
+          backgroundColor: '#e0f7fa',
+          border: '3px solid #000080',
+          padding: '20px',
+          textAlign: 'center',
+          margin: '30px 0'
+        }}>
+          <h2 style={{ color: '#000080', marginTop: 0 }}>✨ The Bottom Line</h2>
+          <p style={{ fontSize: '1.3em', fontWeight: 'bold' }}>
+            Take good care of your mirror tiles and they'll make your space look amazing for years to come!
           </p>
-        </section>
-      </main>
+          <p style={{ fontSize: '1.1em' }}>
+            Clean gently, avoid harsh chemicals, and fix problems quickly. When in doubt, ask a professional for help.
+          </p>
+        </div>
+      </section>
     </div>
   );
 };

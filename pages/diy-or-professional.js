@@ -1,183 +1,177 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 
-const BuildingPhase = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 600);
-    };
-
-    window.addEventListener('resize', handleResize);
-    handleResize();
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
+const DIYOrProfessional = () => {
   return (
     <div className="container">
       <Head>
-        <title>Building Phase</title>
-        <meta name="description" content="Learn about building, planning, and installing mirror tiles" />
+        <title>DIY or Hire a Professional?</title>
+        <meta name="description" content="Decide whether to install mirror tiles yourself or hire someone to do it" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header
-        style={{
-          padding: '10px 20px',
-          backgroundColor: '#f8f9fa',
-          borderBottom: '1px solid #ddd',
-        }}
-      >
-        <nav
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            flexWrap: 'wrap',
-            gap: isMobile ? '10px' : '20px',
-          }}
-        >
-          <Link href="/designing-mirror-tiles">
-            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
-              Designing with Tiles
-            </span>
-          </Link>
-          <Link href="/diy-or-professional">
-            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
-              Going DIY or Professional
-            </span>
-          </Link>
-          <Link href="/setting-tiles">
-            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
-              Installing Tiles
-            </span>
-          </Link>
-          <Link href="/cleaning-and-maintenance">
-            <span style={{ textDecoration: 'none', color: '#0070f3', fontWeight: 'bold' }}>
-              Cleaning and Maintenance
-            </span>
-          </Link>
-        </nav>
-      </header>
-      <main style={{ fontFamily: 'Arial, sans-serif' }}>
-        <h1>Building Phase</h1>
-        <div id="Communicating_Your_Ideas_And_Receiving_Bids" className="new"></div>
-        <h2 id="Communicating_Your_Ideas_And_Receiving_Bids">Communicating Your Ideas And Receiving Bids</h2>
-        <p>When you are trying to figure out if a project is even worth doing -- or budgeting -- then making a plan for presenting the information to contractors is a great first step. See the checklist below for the information you will need to have handy when discussing this project with a professional</p>
 
-        <div style={{ width: '80%', margin: 'auto', borderRadius: '10px', backgroundColor: '#f0f0f0', padding: '20px' }}>
-          <h2 id="Checklist_When_Looking_for_a_Quote">Checklist for Getting a Quote from a Professional</h2>
-          <ul style={{ listStyleType: 'none', padding: 0 }}>
-            <li><input type="checkbox" /> A photo of the space</li>
-            <li><input type="checkbox" /> An inspo photo for how you'd like the space to look</li>
-            <li><input type="checkbox" /> An inspo photo or drawing that shows the dimension of the mirror tile and look itself</li>
-            <li><input type="checkbox" /> Information about other construction going on in the location</li>
-            <li><input type="checkbox" /> The location of the space being worked on in your home (first floor, etc)</li>
-            <li><input type="checkbox" /> The type of wall (stucco, drywall, etc)</li>
-            <li><input type="checkbox" /> Overall size of the space</li>
-            <li><input type="checkbox" /> Size of each individual tile</li>
-          </ul>
-        </div>
+      <h1>🔨 Should You DIY or Hire Someone?</h1>
 
-        <div id="Considerations:_DIY_Vs._Professional" className="new"></div>
-        <h2 id="Considerations:_DIY_Vs._Professional">Installation Considerations: DIY Vs. Professional</h2>
-        <div>
-          <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-            <thead>
-              <tr>
-                <th style={{ border: '1px solid black', padding: '8px', textAlign: 'left', backgroundColor: '#f2f2f2' }}>Criteria</th>
-                <th style={{ border: '1px solid black', padding: '8px', textAlign: 'left', backgroundColor: '#f2f2f2' }}>Professional Installation</th>
-                <th style={{ border: '1px solid black', padding: '8px', textAlign: 'left', backgroundColor: '#f2f2f2' }}>DIY Installation</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td style={{ border: '1px solid black', padding: '8px' }}>Cost</td>
-                <td style={{ border: '1px solid black', padding: '8px' }}>Higher - Professional fees and material markup</td>
-                <td style={{ border: '1px solid black', padding: '8px' }}>Lower - Only material costs and tools</td>
-              </tr>
-              <tr>
-                <td style={{ border: '1px solid black', padding: '8px' }}>Timing</td>
-                <td style={{ border: '1px solid black', padding: '8px' }}>Faster - With scheduling and experience</td>
-                <td style={{ border: '1px solid black', padding: '8px' }}>Slower - Due to lack of experience and possible errors</td>
-              </tr>
-              <tr>
-                <td style={{ border: '1px solid black', padding: '8px' }}>Difficulty of Installation</td>
-                <td style={{ border: '1px solid black', padding: '8px' }}>Low - Experts handle the process</td>
-                <td style={{ border: '1px solid black', padding: '8px' }}>High - Requires skill, precision, and tools</td>
-              </tr>
-              <tr>
-                <td style={{ border: '1px solid black', padding: '8px' }}>Quality of Finish</td>
-                <td style={{ border: '1px solid black', padding: '8px' }}>High - Professional quality and finish</td>
-                <td style={{ border: '1px solid black', padding: '8px' }}>Variable - Depends on skill level</td>
-              </tr>
-              <tr>
-                <td style={{ border: '1px solid black', padding: '8px' }}>Warranty</td>
-                <td style={{ border: '1px solid black', padding: '8px' }}>Usually provided by professionals</td>
-                <td style={{ border: '1px solid black', padding: '8px' }}>None - Responsible for any fixes yourself</td>
-              </tr>
-              <tr>
-                <td style={{ border: '1px solid black', padding: '8px' }}>Customization</td>
-                <td style={{ border: '1px solid black', padding: '8px' }}>High - Experts can handle custom requests</td>
-                <td style={{ border: '1px solid black', padding: '8px' }}>Limited - Dependent on personal skill</td>
-              </tr>
-              <tr>
-                <td style={{ border: '1px solid black', padding: '8px' }}>Experience Required</td>
-                <td style={{ border: '1px solid black', padding: '8px' }}>None - Handled by professionals</td>
-                <td style={{ border: '1px solid black', padding: '8px' }}>High - Need to learn and practice</td>
-              </tr>
-              <tr>
-                <td style={{ border: '1px solid black', padding: '8px' }}>Stress Level</td>
-                <td style={{ border: '1px solid black', padding: '8px' }}>Low - Managed by professionals</td>
-                <td style={{ border: '1px solid black', padding: '8px' }}>High - Managing the project yourself</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <h2>Getting Ready to Talk to Contractors</h2>
+      <p>
+        Before you decide to hire someone, it's good to have all your info ready. This helps you get better quotes and makes sure contractors understand what you want.
+      </p>
 
-        <h2 id="Installation_Costs">Professional Installation Costs</h2>
-        <div>
-          <table border="1" cellpadding="10" cellspacing="0" style={{ borderCollapse: 'collapse', width: '100%' }}>
-            <thead>
-              <tr style={{ backgroundColor: '#f2f2f2' }}>
-                <th style={{ textAlign: 'left' }}>Factors</th>
-                <th style={{ textAlign: 'left' }}>Effect on Project Cost</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Irregular shaped or large mirror tiles</td>
-                <td>Increases cost</td>
-              </tr>
-              <tr>
-                <td>Antiqued mirror</td>
-                <td>Increases cost</td>
-              </tr>
-              <tr>
-                <td>Complex shapes or tile patterns</td>
-                <td>Increases cost</td>
-              </tr>
-              <tr>
-                <td>Fitting the tiles into an enclosed space (like a backsplash)</td>
-                <td>Increases cost</td>
-              </tr>
-              <tr>
-                <td>Cut outs for notches, outlets, or any other fabrication</td>
-                <td>Increases cost</td>
-              </tr>
-              <tr>
-                <td>Installing on a surface that needs to be prepped before mirror tiles can be mounted to it (like brick)</td>
-                <td>Increases cost</td>
-              </tr>
-            </tbody>
-          </table>
+      <div style={{
+        backgroundColor: '#FFE4B5',
+        border: '5px solid #FF0000',
+        borderRadius: '10px',
+        padding: '20px',
+        margin: '20px 0'
+      }}>
+        <h2 style={{ color: '#FF0000', marginTop: 0 }}>📋 Checklist: What to Show Contractors</h2>
+        <div style={{ fontSize: '1.1em' }}>
+          <p>✅ <strong>Photo of your space</strong> - Show them what you're working with</p>
+          <p>✅ <strong>Inspiration photo</strong> - Show them the look you want</p>
+          <p>✅ <strong>Tile size example</strong> - Picture or drawing of how big each tile should be</p>
+          <p>✅ <strong>Other work happening</strong> - Are you doing other renovations?</p>
+          <p>✅ <strong>Location details</strong> - First floor? Basement? Tell them where</p>
+          <p>✅ <strong>Wall type</strong> - Drywall? Concrete? They need to know</p>
+          <p>✅ <strong>Measurements</strong> - How big is the area you want to cover?</p>
+          <p>✅ <strong>Tile size preference</strong> - How big should each mirror tile be?</p>
         </div>
-      </main>
+      </div>
+
+      <h2>DIY vs Professional: The Real Deal</h2>
+      <div style={{
+        backgroundColor: '#F0F8FF',
+        border: '3px solid #000080',
+        padding: '20px',
+        marginBottom: '20px'
+      }}>
+        <table style={{ 
+          width: '100%', 
+          borderCollapse: 'collapse',
+          border: '2px solid #000080'
+        }}>
+          <thead>
+            <tr style={{ backgroundColor: '#D3D3D3' }}>
+              <th style={{ border: '2px solid #000080', padding: '12px', fontWeight: 'bold' }}>What Matters</th>
+              <th style={{ border: '2px solid #000080', padding: '12px', fontWeight: 'bold' }}>Hire a Pro</th>
+              <th style={{ border: '2px solid #000080', padding: '12px', fontWeight: 'bold' }}>Do It Yourself</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style={{ border: '1px solid #000080', padding: '10px', fontWeight: 'bold' }}>💰 Cost</td>
+              <td style={{ border: '1px solid #000080', padding: '10px' }}>More expensive - You pay for their time and skills</td>
+              <td style={{ border: '1px solid #000080', padding: '10px' }}>Cheaper - Just buy materials and tools</td>
+            </tr>
+            <tr style={{ backgroundColor: '#f9f9f9' }}>
+              <td style={{ border: '1px solid #000080', padding: '10px', fontWeight: 'bold' }}>⏰ How Long</td>
+              <td style={{ border: '1px solid #000080', padding: '10px' }}>Faster - They know what they're doing</td>
+              <td style={{ border: '1px solid #000080', padding: '10px' }}>Slower - You'll need to learn and might make mistakes</td>
+            </tr>
+            <tr>
+              <td style={{ border: '1px solid #000080', padding: '10px', fontWeight: 'bold' }}>😰 How Hard</td>
+              <td style={{ border: '1px solid #000080', padding: '10px' }}>Easy for you - They handle everything</td>
+              <td style={{ border: '1px solid #000080', padding: '10px' }}>Hard - Need skills, tools, and patience</td>
+            </tr>
+            <tr style={{ backgroundColor: '#f9f9f9' }}>
+              <td style={{ border: '1px solid #000080', padding: '10px', fontWeight: 'bold' }}>✨ Final Look</td>
+              <td style={{ border: '1px solid #000080', padding: '10px' }}>Professional quality - Looks perfect</td>
+              <td style={{ border: '1px solid #000080', padding: '10px' }}>Depends on your skills - Might be good enough</td>
+            </tr>
+            <tr>
+              <td style={{ border: '1px solid #000080', padding: '10px', fontWeight: 'bold' }}>🛡️ Warranty</td>
+              <td style={{ border: '1px solid #000080', padding: '10px' }}>Usually comes with guarantee</td>
+              <td style={{ border: '1px solid #000080', padding: '10px' }}>No warranty - If something breaks, you fix it</td>
+            </tr>
+            <tr style={{ backgroundColor: '#f9f9f9' }}>
+              <td style={{ border: '1px solid #000080', padding: '10px', fontWeight: 'bold' }}>🎨 Custom Work</td>
+              <td style={{ border: '1px solid #000080', padding: '10px' }}>Can handle tricky requests</td>
+              <td style={{ border: '1px solid #000080', padding: '10px' }}>Limited to your skill level</td>
+            </tr>
+            <tr>
+              <td style={{ border: '1px solid #000080', padding: '10px', fontWeight: 'bold' }}>📚 Experience Needed</td>
+              <td style={{ border: '1px solid #000080', padding: '10px' }}>None - They've got this</td>
+              <td style={{ border: '1px solid #000080', padding: '10px' }}>A lot - You need to learn everything</td>
+            </tr>
+            <tr style={{ backgroundColor: '#f9f9f9' }}>
+              <td style={{ border: '1px solid #000080', padding: '10px', fontWeight: 'bold' }}>😤 Stress Level</td>
+              <td style={{ border: '1px solid #000080', padding: '10px' }}>Low stress - Just pay and wait</td>
+              <td style={{ border: '1px solid #000080', padding: '10px' }}>High stress - Everything is on you</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>💸 What Makes Professional Installation Cost More?</h2>
+      <div style={{
+        backgroundColor: '#F5F5DC',
+        border: '3px solid #8B4513',
+        padding: '20px',
+        marginBottom: '20px'
+      }}>
+        <p style={{ fontWeight: 'bold', color: '#8B4513', fontSize: '1.2em' }}>
+          These things will make your project cost more:
+        </p>
+        <table style={{ 
+          width: '100%', 
+          borderCollapse: 'collapse',
+          border: '2px solid #8B4513',
+          marginTop: '15px'
+        }}>
+          <thead>
+            <tr style={{ backgroundColor: '#DEB887' }}>
+              <th style={{ border: '1px solid #8B4513', padding: '10px' }}>What Makes It Harder</th>
+              <th style={{ border: '1px solid #8B4513', padding: '10px' }}>Why It Costs More</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style={{ border: '1px solid #8B4513', padding: '8px' }}>Big or weird-shaped tiles</td>
+              <td style={{ border: '1px solid #8B4513', padding: '8px' }}>💰 Harder to handle and install</td>
+            </tr>
+            <tr style={{ backgroundColor: '#f9f9f9' }}>
+              <td style={{ border: '1px solid #8B4513', padding: '8px' }}>Antique/aged mirror tiles</td>
+              <td style={{ border: '1px solid #8B4513', padding: '8px' }}>💰 More expensive materials</td>
+            </tr>
+            <tr>
+              <td style={{ border: '1px solid #8B4513', padding: '8px' }}>Fancy patterns or layouts</td>
+              <td style={{ border: '1px solid #8B4513', padding: '8px' }}>💰 Takes more time and skill</td>
+            </tr>
+            <tr style={{ backgroundColor: '#f9f9f9' }}>
+              <td style={{ border: '1px solid #8B4513', padding: '8px' }}>Tight spaces (like backsplashes)</td>
+              <td style={{ border: '1px solid #8B4513', padding: '8px' }}>💰 Harder to work in small areas</td>
+            </tr>
+            <tr>
+              <td style={{ border: '1px solid #8B4513', padding: '8px' }}>Cutting around outlets or fixtures</td>
+              <td style={{ border: '1px solid #8B4513', padding: '8px' }}>💰 Precise cuts take extra time</td>
+            </tr>
+            <tr style={{ backgroundColor: '#f9f9f9' }}>
+              <td style={{ border: '1px solid #8B4513', padding: '8px' }}>Wall needs prep work (like fixing brick)</td>
+              <td style={{ border: '1px solid #8B4513', padding: '8px' }}>💰 Extra work before tiles can go up</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style={{
+        backgroundColor: '#e0f7fa',
+        border: '3px solid #000080',
+        padding: '20px',
+        textAlign: 'center',
+        margin: '30px 0'
+      }}>
+        <h2 style={{ color: '#000080', marginTop: 0 }}>🤔 Still Not Sure?</h2>
+        <p style={{ fontSize: '1.2em' }}>
+          <strong>Quick decision helper:</strong>
+        </p>
+        <p style={{ fontSize: '1.1em' }}>
+          👍 <strong>Go DIY if:</strong> Small area, you like learning new things, you have time, and you're not picky about perfection
+        </p>
+        <p style={{ fontSize: '1.1em' }}>
+          👍 <strong>Hire a pro if:</strong> Large area, you want it perfect, you're busy, or you're dealing with expensive tiles
+        </p>
+      </div>
     </div>
   );
 }
 
-export default BuildingPhase;
+export default DIYOrProfessional;
