@@ -95,6 +95,33 @@ const Home = () => {
           </li>
         </ul>
       </div>
+
+      {/* Safety Disclaimer */}
+      <div style={{
+        backgroundColor: '#FFCCCB',
+        border: '3px solid #FF0000',
+        padding: '20px',
+        marginBottom: '30px',
+        borderRadius: '8px'
+      }}>
+        <h3 style={{ color: '#FF0000', fontSize: '1.4em', marginTop: 0 }}>
+          🚨 IMPORTANT SAFETY WARNING 🚨
+        </h3>
+        <p style={{ fontSize: '1.1em', lineHeight: '1.6', fontWeight: 'bold' }}>
+          Working with mirror tiles can be dangerous. Please read these safety warnings:
+        </p>
+        <ul style={{ fontSize: '1em', lineHeight: '1.6' }}>
+          <li><strong>Sharp edges:</strong> Mirror tiles have extremely sharp edges that can cause serious cuts. Always wear safety gloves.</li>
+          <li><strong>Glass fragments:</strong> Broken mirror tiles create dangerous glass shards. Wear safety glasses and closed-toe shoes.</li>
+          <li><strong>Chemical adhesives:</strong> Mirror tile adhesives contain strong chemicals. Use in well-ventilated areas and follow manufacturer safety instructions.</li>
+          <li><strong>Heavy materials:</strong> Large installations can be heavy. Ensure proper wall support and consider professional installation.</li>
+          <li><strong>Electrical safety:</strong> Never install near electrical outlets without turning off power and consulting an electrician.</li>
+        </ul>
+        <p style={{ fontSize: '1em', fontStyle: 'italic', color: '#CC0000' }}>
+          <strong>Disclaimer:</strong> This guide is for informational purposes only. We are not responsible for injuries or damage. 
+          When in doubt, consult a professional contractor. DIY projects involving glass and adhesives carry inherent risks.
+        </p>
+      </div>
       
       <div style={{
         backgroundColor: '#F0F8FF',

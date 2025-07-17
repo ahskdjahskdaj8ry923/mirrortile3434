@@ -12,6 +12,32 @@ const DIYOrProfessional = () => {
 
       <h1>🔨 Should You DIY or Hire Someone?</h1>
 
+      {/* Safety Disclaimer */}
+      <div style={{
+        backgroundColor: '#FFCCCB',
+        border: '3px solid #FF0000',
+        padding: '20px',
+        marginBottom: '30px',
+        borderRadius: '8px'
+      }}>
+        <h3 style={{ color: '#FF0000', fontSize: '1.4em', marginTop: 0 }}>
+          ⚠️ SAFETY WARNING FOR DIY PROJECTS ⚠️
+        </h3>
+        <p style={{ fontSize: '1.1em', lineHeight: '1.6', fontWeight: 'bold' }}>
+          DIY mirror tile installation involves serious safety risks:
+        </p>
+        <ul style={{ fontSize: '1em', lineHeight: '1.6' }}>
+          <li><strong>Glass cutting injuries:</strong> Mirror tiles have razor-sharp edges. Wear safety gloves, safety glasses, and closed-toe shoes.</li>
+          <li><strong>Chemical exposure:</strong> Adhesives contain toxic fumes. Work in well-ventilated areas and read all safety labels.</li>
+          <li><strong>Heavy lifting:</strong> Large installations can cause back injury. Get help lifting and positioning.</li>
+          <li><strong>Wall structural damage:</strong> Improper installation can damage walls or cause tiles to fall and shatter.</li>
+          <li><strong>Electrical hazards:</strong> Never work near electrical outlets without turning off power first.</li>
+        </ul>
+        <p style={{ fontSize: '1em', fontStyle: 'italic', color: '#CC0000' }}>
+          <strong>Consider hiring a professional if:</strong> You're not experienced with glass work, adhesives, or if the installation area is large or complex. Your safety is worth more than the cost savings.
+        </p>
+      </div>
+
       <h2>Getting Ready to Talk to Contractors</h2>
       <p>
         Before you decide to hire someone, it's good to have all your info ready. This helps you get better quotes and makes sure contractors understand what you want.
